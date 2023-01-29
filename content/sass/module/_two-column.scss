@@ -1,0 +1,81 @@
+/* Two Columns Grid */
+.two-column-full-grid {
+    margin-top: 60px;
+    max-width: 100%;
+    .row {
+        margin-bottom: 40px;
+        align-items: center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .col-text {
+            .content {
+                max-width: 565px;
+            }
+            p {
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .col-image {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+            }
+            img {
+                transition: all .5s;
+                max-width: 100%;
+                min-height: 499px;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+    .row-text {
+        .col-text {
+            padding-right: 30px;
+            .content {
+                margin-left: auto;
+            }
+        }
+        .col-image {
+            padding-left: 30px;
+            &:before {
+                top: calc(-100% - 100px);
+                right: 0;
+                background: url("../images/pattern/radial-yellow.png") no-repeat center/cover;
+                width: 598px;
+                height: 1210px;
+            }
+            img {
+                border-top-right-radius: 0 !important;
+                border-bottom-right-radius: 0 !important;
+            }
+        }
+    }
+    .row-image {
+        .col-text {
+            padding-left: 30px;
+            .content {
+                margin-right: auto;
+            }
+        }
+        .col-image {
+            padding-right: 30px;
+            &:before {
+                top: 0;
+                left: 0;
+                background: url("../images/pattern/radial-blue.png") no-repeat center/cover;
+                width: 802px;
+                height: 1063px;
+            }
+            img {
+                border-top-left-radius: 0 !important;
+                border-bottom-left-radius: 0 !important;
+            }
+        }
+    }
+} 

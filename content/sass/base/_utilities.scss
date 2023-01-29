@@ -1,0 +1,49 @@
+/* Utilities */
+ul.no-list {
+    list-style-type: none;
+}
+ul {
+    margin: 0;
+}
+/* Font Family */
+@each $font-name, $font-family in $font-families {
+    .font-#{$font-name} {
+        font-family: $font-family;
+    }
+} 
+/* Text Colors */
+@each $text-color, $hex-color in $text-colors {
+    .color-#{$text-color} {
+        color: $hex-color !important;
+    }
+}
+/* center aligned */
+%center-aligned {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+/* keyframes */
+@-webkit-keyframes shine {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes shine {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

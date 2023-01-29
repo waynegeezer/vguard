@@ -1,0 +1,21 @@
+/* This stylesheet is the main stylesheet */
+
+/* Compass Files */
+//@import "compass";
+
+/* Vendors */
+@import "plugins/plugins";
+
+/* Default base files */
+@import "base/base";
+
+/* Layouts */
+@import "layout/layout";
+
+/* Modules */
+@import "module/module";
+
+/* Theme */
+@import "theme/theme";
+
+/* Other Specific Files */

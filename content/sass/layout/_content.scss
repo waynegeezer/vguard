@@ -1,0 +1,149 @@
+/* Common Elements */
+section {
+    padding: 30px 0;
+}   
+main {
+
+}
+.container {
+    max-width: 1220px;
+    padding: 0;
+}
+/* aos */
+@include media-breakpoint-down(lg) {
+    [data-aos^=fade][data-aos^=fade] {
+        opacity: 1;
+    }
+    [data-aos=fade-up] {
+        transform: translate3d(0, 0, 0);
+    }
+}
+/* media icons */
+.media-column {
+    flex-direction: column;
+}
+.row-media {
+    margin-top: 40px;
+}
+.media-icons {
+    padding-bottom: 15px;
+    position: relative;
+    margin-bottom: 50px;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to right, $orange , $orange-100);
+        width: 48px;
+        height: 3px;
+    }
+    .media-image {
+        background: $white;
+        box-shadow: 0 4px 30px rgba($blue, 0.25);
+        border-radius: 50%;
+        width: 72px;
+        height: 72px;
+        margin-bottom: 15px;
+        position: relative;
+        img {
+            @extend %center-aligned;
+            max-width: 60px;
+            max-height: 60px;
+        }
+    }
+    .media-body {
+        max-width: 260px;
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+} 
+.media-icons-dual {
+    @extend .media-icons;
+    .media-body {
+        max-width: 345px;
+        p {
+            @extend %font-size-24;
+            line-height: 30px;
+            font-weight: $font-weight-semibold;
+            span {
+                @extend %font-size-16;
+                font-weight: $font-weight-regular;
+                display: block;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+/* section description */
+.description-block {
+    max-width: 865px;
+    margin: 0 auto;
+    &.mw-1030 {
+        max-width: 1030px;
+    }
+    &.mw-750 {
+        max-width: 750px;
+    }
+    &.text-left {
+        margin-left: 0;
+        h2, p {
+            text-align: left;
+        }
+    }
+    h2, p {
+        text-align: center;
+    }
+} 
+/* list with ticks */
+.list-tick {
+    list-style-type: none;
+    margin: 35px 0 45px;
+    li {
+        @extend %font-size-18;
+        margin-bottom: 30px;
+        padding: 3px 0 3px 52px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url("../images/icons/tick.svg") no-repeat center/cover;
+            width: 32px;
+            height: 32px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+} 
+/* background radials */
+.section-radial-bg {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -300px;
+        left: 0;
+        background: url("../images/pattern/radial-dual.png") no-repeat center/cover;
+        width: 100%;
+        min-height: 1283px;
+    }
+    + section {
+        position: relative;
+    }
+} 
+/* Floating icon - off season */
+.floating-icon-block {
+    position: fixed;
+    bottom: 50px;
+    right: 85px;
+    z-index: 10;
+    a {
+        display: block;
+    }
+} 

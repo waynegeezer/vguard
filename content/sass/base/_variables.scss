@@ -1,0 +1,72 @@
+/* VARIABLES */
+/* Font Families */
+$font-titillium: 'Titillium Web', sans-serif;
+
+$font-primary: $font-titillium;
+
+/* Colors */
+$white: #fff;
+$white-100: #FAF9FE;
+$white-200: #E8E8E8;
+
+$black: #000;
+$black-100: #222222;
+$black-200: #0E0E0E;
+$black-300: #242424;
+$black-400: #000104;
+
+$grey: #333333;
+$grey-100: #7D7D7D;
+$grey-200: #484848;
+$grey-300: #3C3C3C;
+$grey-400: #828282;
+$grey-500: #A0A0A0;
+$grey-600: #606060;
+$grey-700: #98A4AB;
+
+$blue: #99bad0;
+$blue-100: #0E3193;
+$blue-200: #5F86F5;
+$blue-300: #2C6EB5;
+
+$blue-dark: #092133;
+
+$orange: #FEBC11;
+$orange-100: #F8981D;
+$orange-200: #F7941D;
+$orange-300: #FEBC10;
+$orange-400: #F99C1B;
+
+$color-primary: $grey;
+
+/* base font size */
+$font-size-base: 16px;
+
+/* Font Weight */
+$font-weight-light: 300;      /*$light*/
+$font-weight-regular: 400;     /*$regular*/
+$font-weight-medium: 500;     /*$medium*/
+$font-weight-semibold: 600;   /*$semibold*/
+$font-weight-bold: 700;       /*$bold*/
+$font-weight-extrabold: 800;  /*$extrabold*/
+$font-weight-black: 900;      /*$black*/
+
+/* Font Italic */
+$font-style-italic: italic; 
+$font-style-normal: normal; 
+
+/* HELPERS */
+/* Font Family */
+$font-families:(
+
+);
+/* Text Colors */
+$text-colors:(
+    white: $white,
+    black: $black
+);
+/* background Colors */
+$bg-color:(
+    black: $black,
+    white: $white
+);

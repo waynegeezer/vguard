@@ -1,0 +1,55 @@
+/* Air Coolers page */
+.section-why-vguard {
+    padding-top: 105px;
+}
+.section-video {
+    padding-top: 70px;
+}
+.quick-guide-text {
+    @extend %font-size-16;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    a {
+        color: $blue-100;
+        font-weight: $font-weight-semibold;
+    }
+    &:before {
+        content: "";
+        position: relative;
+        display: inline-block;
+        background: url("../images/icons/guide.svg") no-repeat center/cover;
+        width: 48px;
+        height: 48px;
+        margin-right: 15px;
+    }
+}
+.row-neighbourhood {
+    margin: 75px 0 60px;
+    .media {
+        padding: 0;
+        margin: 0;
+        &:before {
+            display: none;
+        }
+        .media-image {
+            margin: 0 20px 0 0;
+        }
+        .media-body {
+            p {
+                color: $grey-600;
+                font-weight: $font-weight-semibold;
+                span {
+                    @extend %font-size-54;
+                    color: $black-300;
+                    font-weight: $font-weight-bold;
+                    display: block;
+                    margin-top: -6px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+/* Section Locator */
+.section-locator {
+    position: relative;
+    padding-bottom: 100px;
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -550px;
+        background: url("../images/pattern/radial-yellow-2.png") no-repeat center/cover;
+        width: 1102px;
+        height: 1067px;
+        z-index: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+} 
+.locator-filter {
+    display: flex;
+    flex-flow: row wrap;
+    .form-group {
+        margin: 0 0 0 18px;
+        &:first-child, &:last-child {
+            margin-left: 0;
+        }
+    }
+    .form-group-select {
+        width: 289px;
+    }
+    .form-group-input {
+        width: 207px;
+    }
+    .form-group-text {
+        margin: 0 10px;
+        p {
+            @extend %font-size-16;
+            color: $grey-600;
+            margin: 0;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            span {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 2px;
+            }
+        }
+    }
+    .form-group-button {
+        margin: 40px auto 0;
+        display: block;
+        button {
+            width: 192px;
+        }
+    }
+}
+.locator-results {
+    margin: 45px auto 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+.locator-item {
+    width: 33.3%;
+    padding: 20px 40px 0 30px;
+    margin-bottom: 55px;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 110px;
+        background-color: $orange-400;
+    }
+    p {
+        margin: 0;
+        a {
+            color: $black;
+        }
+    }
+    .locator-name {
+        @extend %font-size-22;
+        color: $black;
+        font-weight: $font-weight-bold;
+        margin-bottom: 12px;
+    }
+    .locator-details {
+        @extend %font-size-18;
+        line-height: 28px;
+        color: $black;
+    }
+    .locator-map {
+        @extend %font-size-18;
+        color: $blue-300;
+        text-decoration: underline;
+        margin-top: 10px;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,216 @@
+/* Tabs */
+.tabs-grid {
+    margin: 40px 0 35px;
+    position: relative;
+    z-index: 3;
+    .nav-pills {
+        justify-content: center;
+        position: relative;
+        .slider {
+            display: inline-block;
+            width: 30px;
+            height: 100%;
+            border-radius: 150px;
+            background-color: $blue-dark;
+            position: absolute;
+            bottom: 0;
+            z-index: 0;
+            transition: all .2s linear;
+        }
+        .nav-link {
+            @include font-size(20px);
+            color: $grey-100;
+            font-weight: $font-weight-semibold;
+            position: relative;
+            padding: 12px 30px;
+            &:before {
+                content: "";
+                position: relative;
+                top: -2px;
+                margin-right: 10px;
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                background-color: transparent;
+                border-radius: 50%;
+            }
+            &.active {
+                color: $white;
+                font-weight: $font-weight-bold;
+                background-color: transparent;
+                &:before {
+                    background-color: $orange-200;
+                    transition: all .4s;
+                }
+            }
+        }
+    }
+    .tab-content {
+        margin-top: 80px;
+    }
+    .row-single {
+        .single-product {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                background: url("../images/pattern/radial-product.png") no-repeat center/cover;
+                width: 110%;
+                height: 110%;
+                left: -60px;
+                top: -60px;
+            
+            }
+            img {
+                position: relative;
+                z-index: 2;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .product-price {
+            font-weight: $font-weight-semibold;
+            background: linear-gradient(90deg, $orange-300, $orange-200 44%);
+            display: inline-block;
+            position: absolute;
+            top: 230px;
+            left: 25px;
+            padding: 8px 22px;
+            border-radius: 100px;
+            z-index: 2;
+            p {
+                color: $white;
+                margin-bottom: 0;
+            }
+        }
+        .single-product-details {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: 35px;
+            .media {
+                margin-right: 50px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            .media-body {
+                margin: -8px 0 0 12px;
+                p {
+                    text-align: center;
+                    margin-bottom: 0;
+                    span {
+                        @extend %font-size-18;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .product-filter {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        p {
+            @extend %font-size-18;
+            font-weight: $font-weight-bold;
+            margin: 0;
+        }
+        .custom-checkbox {
+            margin-left: 35px;
+        }
+    }
+    .row-multiple {
+        margin: 40px 0 0;
+    }
+    .product-item {
+        width: 352px;
+        border: 1px solid $white-200;
+        border-radius: 20px;
+        margin: 0 auto 40px;
+        transition: all .3s;
+        &:hover {
+            background-color: $white;
+            border: 1px solid rgba($white-200, 0.5);
+            box-shadow: 0 4px 30px rgba($blue, 0.25);
+            .item-tier-1, .item-tier-3 {
+                border-color: transparent;
+            }
+        }
+        .item-tier-1 {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba($white, 0.5);
+            padding: 15px 20px;
+            border-bottom: 1px solid $white-200;
+            border-radius: 20px 20px 0 0;
+            p {
+                margin: 0;
+            }
+        }
+        .item-tier-2 {
+            padding: 15px;
+            img {
+                max-width: 195px;
+                max-height: 257px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .item-tier-3 {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: center;
+            background-color: $white;
+            border-top: 1px solid $white-200;
+            border-radius: 0 0 20px 20px;
+            padding: 20px;
+            .media {
+                padding: 0;
+                margin: 0 25px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:before {
+                    display: none;
+                }
+                img {
+                    max-height: 30px;
+                    width: auto;
+                    display: block;
+                    margin: 0 auto;
+                }
+                .media-body {
+                    margin-top: 10px;
+                    p {
+                        @extend %font-size-14;
+                        text-align: center;
+                        span {
+                            @extend %font-size-16;
+                            font-weight: $font-weight-bold;
+                            display: block;
+                            margin-bottom: 4px;
+                        }
+                    }
+                }
+            }
+        }
+        .product-name {
+            @extend %font-size-18;
+            font-weight: $font-weight-bold;
+        }
+        .product-price {
+            @extend %font-size-16;
+            color: $grey-200;
+            font-weight: $font-weight-semibold;
+        }
+    }
+} 

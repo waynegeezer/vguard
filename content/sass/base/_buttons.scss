@@ -1,0 +1,15 @@
+/* Buttons */ 
+.btn-primary {
+    color: $black-300 !important;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, $orange-300, $orange-200 44.35%);
+    box-shadow: 0 4px 30px rgba($black, 0.25);
+    border-radius: 100px;
+    border: none;
+    background-size: 150% auto;
+    &:hover {
+        animation: shine 3s linear infinite;
+    }
+}

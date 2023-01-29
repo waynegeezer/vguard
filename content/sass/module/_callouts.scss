@@ -1,0 +1,52 @@
+/* Call-to callout */
+.section-call-to {
+    background-color: $black-400;
+    position: relative;
+    .row {
+        align-items: center;
+    }
+    .col-content {
+        h4 {
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
+    .col-icons {
+        display: flex;
+        flex-flow: row wrap;
+        p {
+            color: $white;
+            a {
+                color: $white;
+            }
+        }
+    }
+    .media-icons {
+        margin-bottom: 0;
+        padding: 0 30px;
+        &:before {
+            display: none;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: 0;
+            width: 1px;
+            height: 60px;
+            background-color: $grey-200;
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+            &:after {
+                display: none;
+            }
+        }
+        > img {
+            margin-bottom: 10px;
+        }
+    }
+} 

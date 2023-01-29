@@ -1,0 +1,28 @@
+/* MIXINS */
+/* Mixin for font size */
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+@mixin font-size ($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+/* Mixin for hover focus */ 
+@mixin hover-focus () {
+    &:hover, &:focus {
+        @content;
+    }
+}
+/* Mixin for hover */ 
+@mixin hover () {
+    &:hover {
+        @content;
+    }
+}
+/* Mixin for focus */ 
+@mixin focus () {
+    &:focus {
+        @content;
+    }
+}
