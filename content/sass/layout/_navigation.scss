@@ -38,7 +38,7 @@ header {
         .nav-link {
             color: $black-200;
             &:hover {
-                font-weight: $font-weight-semibold;
+                text-shadow: 0 0 .65px $black-200, 0 0 .65px $black-200;
             }
         }
     }

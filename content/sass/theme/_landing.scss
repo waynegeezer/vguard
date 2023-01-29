@@ -16,6 +16,7 @@
     a {
         color: $blue-100;
         font-weight: $font-weight-semibold;
+        @extend %hover-text;
     }
     &:before {
         content: "";

@@ -59,16 +59,15 @@ $(window).on('resize scroll', function() {
 		scrollTop = $(window).scrollTop(),
 		percent   = ((scrollTop)/hHeight);
 	if ($('.section-tried-tested').isInViewport()) {
-		$(".col-image img").css("border-radius", (percent * 250 )+ "px");
+		$(".col-image img").css("border-radius", (percent * 300 )+ "px");
 	} else {
 		$(".col-image img").css("border-radius", "100px");
 	}
 
-	if (scrollTop < 300) {
-		$(".banner-bg-block img").css("border-radius", "150px");
-		console.log('1');
+	if (scrollTop < 80) {
+		$(".banner-bg-block img").css("border-radius", "90px");
 	} else {
-		$(".banner-bg-block img").css("border-radius", (percent * 4000) + "px");
+		$(".banner-bg-block img").css("border-radius", (percent * 7000) + "px");
 	}
 
 

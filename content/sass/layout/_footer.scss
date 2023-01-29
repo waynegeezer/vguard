@@ -4,6 +4,9 @@ footer {
     padding: 30px 0;
     margin-top: 3px;
     position: relative;
+    a {
+        @extend %hover-text;
+    }
     .top-tier {
         padding-bottom: 10px;
         .col-social {

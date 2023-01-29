@@ -47,3 +47,9 @@ ul {
 		background-position: 0% 50%;
 	}
 }
+/* hover */
+%hover-text {
+	&:hover {
+		opacity: 0.7;
+	}
+} 
