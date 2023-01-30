@@ -11,6 +11,9 @@
         .col-text {
             .content {
                 max-width: 565px;
+                @include media-breakpoint-down(lg) {
+                    max-width: 100%;
+                }
             }
             p {
                 &:last-of-type {
@@ -25,18 +28,26 @@
                 position: absolute;
             }
             img {
-                transition: all .5s;
                 max-width: 100%;
                 min-height: 499px;
                 object-fit: cover;
                 position: relative;
+                transition: all .5s;
                 z-index: 1;
+                @include media-breakpoint-down(lg) {
+                    min-height: 440px;
+                    border-radius: 160px;
+                    object-position: 80% center;
+                }
             }
         }
     }
     .row-text {
         .col-text {
             padding-right: 30px;
+            @include media-breakpoint-down(lg) {
+                padding-left: 50px;
+            }
             .content {
                 margin-left: auto;
             }
@@ -59,6 +70,9 @@
     .row-image {
         .col-text {
             padding-left: 30px;
+            @include media-breakpoint-down(lg) {
+                padding-right: 50px;
+            }
             .content {
                 margin-right: auto;
             }

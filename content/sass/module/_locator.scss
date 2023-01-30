@@ -20,20 +20,36 @@
 .locator-filter {
     display: flex;
     flex-flow: row wrap;
+    @include media-breakpoint-down(lg) {
+        justify-content: center;
+    }
     .form-group {
         margin: 0 0 0 18px;
+        @include media-breakpoint-down(lg) {
+            margin: 0 0 0 12px;
+        }
         &:first-child, &:last-child {
             margin-left: 0;
         }
     }
     .form-group-select {
         width: 289px;
+        @include media-breakpoint-down(lg) {
+            width: 32.3%;
+        }
     }
     .form-group-input {
         width: 207px;
+        @include media-breakpoint-down(lg) {
+            width: 32.3%;
+        }
     }
     .form-group-text {
         margin: 0 10px;
+        @include media-breakpoint-down(lg) {
+            margin: 10px 0;
+            width: 100%;
+        }
         p {
             @extend %font-size-16;
             color: $grey-600;
@@ -41,6 +57,9 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
+            @include media-breakpoint-down(lg) {
+                justify-content: center;
+            }
             span {
                 width: 42px;
                 height: 42px;
@@ -56,9 +75,17 @@
     .form-group-button {
         margin: 40px auto 0;
         display: block;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
         button {
             width: 192px;
+            margin: 0 auto;
+            display: block;
         }
+    }
+    .custom-select {
+        margin-bottom: 0;
     }
 }
 .locator-results {
@@ -85,6 +112,7 @@
         margin: 0;
         a {
             color: $black;
+            word-break: break-word;
             @extend %hover-text;
         }
     }

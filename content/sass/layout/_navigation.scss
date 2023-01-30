@@ -5,10 +5,20 @@ header {
     left: 0;
     top: 0;
     z-index: 99;
+    &.header-open {
+        background-color: $white;
+    }
 }
 .navbar {
     padding: 0;
     align-items: flex-start;
+    @include media-breakpoint-down(lg) {
+        padding: 0 50px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 15px 50px 0;
+        align-items: center;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -17,29 +27,128 @@ header {
         background: url("../images/pattern/logo-pattern.svg") no-repeat center/contain;
         width: 433px;
         height: 197px;
+        @include media-breakpoint-down(lg) {
+            width: 400px;
+            height: 184px;
+        }
+        @include media-breakpoint-down(md) {
+            width: 335px;
+            height: 155px;
+            top: -30px;
+            z-index: 1;
+        }
+        @include media-breakpoint-down(sm) {
+            width: 230px;
+            height: 105px;
+        }
     }
     .navbar-brand {
+        width: 155px;
         padding: 0;
         margin: 27px 0 0 70px;
-        z-index: 0;
+        z-index: 1;
+        @include media-breakpoint-down(lg) {
+            margin: 27px 0 0;
+            width: 135px;
+        }
+        @include media-breakpoint-down(md) {
+            margin: 0;
+            width: 105px;
+        }
+        @include media-breakpoint-down(sm) {
+            width: 97px;
+        }
+        img {
+            width: 100%;
+        }
     }
     .navbar-collapse {
         justify-content: flex-end;
         margin-right: 110px;
+        @include media-breakpoint-down(lg) {
+            margin-right: 0;
+        }
+        @include media-breakpoint-down(md) {
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            left: 0;
+            top: 0;
+            margin-top: 60px;
+            background-color: $white;
+            transition: all .05s;
+        }
     }
     .navbar-nav {
         margin-top: 20px;
+        @include media-breakpoint-down(md) {
+            margin-top: 0;
+            padding: 70px 50px 0;
+        }
         .nav-item {
             margin-right: 25px;
+            @include media-breakpoint-down(md) {
+                margin-right: 0;
+            }
             &:last-child {
                 margin-right: 0;
             }
         }
         .nav-link {
             color: $black-200;
+            @include media-breakpoint-down(md) {
+                @include font-size(22px);
+            }
             &:hover {
                 text-shadow: 0 0 .65px $black-200, 0 0 .65px $black-200;
             }
+        }
+    }
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+        z-index: 10;
+        align-self: center;
+        &.collapsed {
+            transform: rotate(0);
+            transform-origin: 0;
+            opacity: 1;
+            .icon-bar {
+                transform: rotate(0);
+                transform-origin: 0;
+                opacity: 1;
+            }
+        }
+        &:not(.collapsed) {
+            .top-bar, .bottom-bar {
+                width: 25px;
+            }
+        }
+        .icon-bar {
+            background: $color-primary;
+            display: block;
+            width: 25px;
+            height: 4px;
+            transition: all 0.2s;
+            border-radius: 30px;
+            + .icon-bar {
+                margin-top: 4px;
+            }
+        }
+        .top-bar {
+            transform: rotate(45deg);
+            transform-origin: 4px 8px;
+            width: 18px;
+            margin-left: auto;
+        }
+        .middle-bar {
+            opacity: 0;
+        }
+        .bottom-bar {
+            transform: rotate(-45deg);
+            transform-origin: 3px -3px;
+            width: 18px;
+            margin-left: auto;
         }
     }
 }

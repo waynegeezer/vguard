@@ -33,11 +33,16 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+textarea {
+    resize: none;
+    height: 145px !important;
+}
 /* Custom select dropdown */ 
 .custom-select {
     background: none;
     padding: 0;
     transition: all .15s;
+    margin-bottom: 1rem;
     &.custom-select--active {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;

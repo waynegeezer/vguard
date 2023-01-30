@@ -13,6 +13,9 @@
             width: 77%;
             height: 100%;
             z-index: 0;
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+            }
         }
     }
     .banner-bg-block {
@@ -27,6 +30,12 @@
             border-radius: 0 90px 90px 0;
             border-top-left-radius: 0 !important;
             border-bottom-left-radius: 0 !important;
+            @include media-breakpoint-down(lg) {
+                max-width: 100%;
+                max-height: 590px;
+                min-height: auto;
+                border-radius: 0 0 340px 340px !important;
+            }
         }
     }
     .banner-product {
@@ -35,14 +44,31 @@
         left: -57%;
         transform: translateX(50%);
         z-index: 1;
-    
+        @include media-breakpoint-down(lg) {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            max-width: 398px;
+            margin: 0 auto;
+        }
     }
     .banner-content {
         max-width: 415px;
         margin-left: 170px;
+        @include media-breakpoint-down(lg) {
+            max-width: 75%;
+            margin: 0 auto;
+            text-align: center;
+        }
         .hastag {
             @extend %font-size-24;
             font-weight: $font-weight-bold;
+        }
+    }
+    .col-banner-product-content {
+        @include media-breakpoint-down(lg) {
+            margin-top: -150px;
         }
     }
 }

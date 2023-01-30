@@ -2,10 +2,69 @@
 .tabs-grid {
     margin: 40px 0 35px;
     position: relative;
-    z-index: 3;
+    z-index: 4;
+    .select-dropdown-active {
+        display: none;
+        cursor: pointer;
+        @extend %font-size-18;
+        color: $white;
+        background-color: $blue-dark;
+        border-radius: 150px;
+        height: 48px;
+        padding: 15px 35px;
+        position: relative;
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            background: url("../images/icons/chevron-down-white.svg") no-repeat center/cover;
+            width: 14px;
+            height: 8px;
+            transition: all .3s;
+        }
+        &.active {
+            border-radius: 23px 23px 0 0;
+            &:before {
+                transform: rotate(-180deg);
+            }
+        }
+        .select-dropdown-text {
+            &:before {
+                content: "";
+                position: relative;
+                top: -1px;
+                margin-right: 10px;
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                background-color: $orange-200;
+                border-radius: 50%;
+            }
+        }
+    }
     .nav-pills {
         justify-content: center;
         position: relative;
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 48px;
+            width: 100%;
+            z-index: 5;
+            display: none;
+            margin-bottom: 0;
+            border-radius: 0 0 50px 50px;
+        }
+        &.nav-pills-active {
+            @include media-breakpoint-down(md) {
+                display: block;
+            }
+        }
         .slider {
             display: inline-block;
             width: 30px;
@@ -16,6 +75,14 @@
             bottom: 0;
             z-index: 0;
             transition: all .2s linear;
+            @include media-breakpoint-down(md) {
+                display: none !important;
+            }
+        }
+        .nav-item {
+            @include media-breakpoint-down(md) {
+                background-color: $blue-dark;
+            }
         }
         .nav-link {
             @include font-size(20px);
@@ -24,6 +91,15 @@
             position: relative;
             padding: 12px 30px;
             transition: all .3s;
+            @include media-breakpoint-down(lg) {
+                @include font-size(18px);
+                padding: 12px 12px;
+            }
+            @include media-breakpoint-down(md) {
+                padding: 12px 35px;
+                width: 100%;
+                text-align: left;
+            }
             &:hover {
                 color: rgba($grey-100, 0.7);
             }
@@ -37,6 +113,9 @@
                 height: 9px;
                 background-color: transparent;
                 border-radius: 50%;
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
             }
             &.active {
                 color: $white !important;
@@ -70,6 +149,9 @@
                 z-index: 2;
                 display: block;
                 margin: 0 auto;
+                @include media-breakpoint-down(lg) {
+                    max-width: 350px;
+                }
             }
         }
         .product-price {
@@ -82,6 +164,9 @@
             padding: 8px 22px;
             border-radius: 100px;
             z-index: 2;
+            @include media-breakpoint-down(lg) {
+                top: 180px;
+            }
             p {
                 color: $white;
                 margin-bottom: 0;
@@ -95,6 +180,9 @@
             margin-top: 35px;
             .media {
                 margin-right: 50px;
+                @include media-breakpoint-down(lg) {
+                    margin-right: 25px;
+                }
                 &:last-child {
                     margin-right: 0;
                 }
@@ -135,6 +223,9 @@
         border-radius: 20px;
         margin: 0 auto 40px;
         transition: all .3s;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
         &:hover {
             background-color: $white;
             border: 1px solid rgba($white-200, 0.5);
@@ -177,6 +268,9 @@
             .media {
                 padding: 0;
                 margin: 0 25px;
+                @include media-breakpoint-down(lg) {
+                    margin: 0 12px;
+                }
                 &:first-child {
                     margin-left: 0;
                 }

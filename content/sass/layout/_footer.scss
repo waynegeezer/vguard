@@ -10,8 +10,10 @@ footer {
     .top-tier {
         padding-bottom: 10px;
         .col-social {
-            flex: 0 0 19%;
-            max-width: 19%;
+            @include media-breakpoint-up(xl) {
+                flex: 0 0 19%;
+                max-width: 19%;
+            }
         }
         .logo {
             width: 200px;
@@ -23,11 +25,14 @@ footer {
             margin-top: 25px;
             list-style-type: none;
             li {
-                margin-right: 24px;
+                margin-right: 12px;
                 &:last-child {
                     margin-right: 0;
                 }
             }
+        }
+        .col-content {
+            padding-left: 25px;
         }
         p {
             @extend %font-size-16;
@@ -46,11 +51,17 @@ footer {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
+            @include media-breakpoint-down(lg) {
+                justify-content: center;
+            }
         }
         p {
             @extend %font-size-16;
             color: $grey-400;
             margin: 0;
+            @include media-breakpoint-down(lg) {
+                order: 2;
+            }
         }
         .phone-list, .copyright-list {
             list-style-type: none;
@@ -78,6 +89,9 @@ footer {
             width: 100%;
             margin-top: 40px;
             justify-content: center;
+            @include media-breakpoint-down(lg) {
+                margin: 40px 0;
+            }
             li, a {
                 color: $grey-500;
             }

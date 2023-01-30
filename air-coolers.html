@@ -18,8 +18,10 @@
             <a class="navbar-brand" href="#">
                 <img src="content/images/logos/vguard.svg" alt="">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar-nav">
                 <ul class="navbar-nav">
@@ -44,23 +46,29 @@
         <!-- Section Banner -->
         <section class="section-banner">
             <div class="row banner-row">
-                <div class="col-md-6 col-banner-bg">
+                <div class="col-xl-6 col-banner-bg">
                     <div class="banner-bg-block">
                         <img src="content/images/banner/air-cooler.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-md-6 col-banner-product-content">
+                <div class="col-xl-6 col-banner-product-content">
                     <div class="banner-product">
                         <img class="w-100" src="content/images/product/air-cooler.png" alt="">
                     </div>
                     <div class="banner-content">
                         <p class="hastag"><span class="font-weight-normal">#</span>AccheAcchoKoThandaKarde</p>
-                        <h1>V-Guard <br>Air Coolers</h1>
+                        <h1>V-Guard <br class="d-none d-xl-block">Air Coolers</h1>
                         <p>Maximum cooling. Minimal energy consumption. Uninterrupted Sleep. Big on style. Small on your pocket. V-Guard offers power, performance and portability and a cooling experience that will blow your mind.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Floating icon -->
+        <div class="floating-icon-block">
+            <a class="floating-icon" href="javascript:void(0);" data-toggle="modal" data-target="#modal-off-season">
+                <img src="content/images/icons/off-season-button.svg" alt="">
+            </a>
+        </div>
         <!-- Section Why V-Guard -->
         <section class="section-why-vguard" id="why-vguard">
             <div class="container">
@@ -68,7 +76,7 @@
                     <h2>Why V-Guard Coolers</h2>
                 </div>
                 <div class="row row-media">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="media media-icons media-column">
                             <div class="media-image">
                                 <img src="content/images/icons/warranty.svg"  alt="">
@@ -78,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="media media-icons media-column">
                             <div class="media-image">
                                 <img src="content/images/icons/inverter-ready.svg"  alt="">
@@ -88,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="media media-icons media-column">
                             <div class="media-image">
                                 <img src="content/images/icons/emi.png"  alt="">
@@ -98,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="media media-icons media-column">
                             <div class="media-image">
                                 <img src="content/images/icons/pan-india.svg"  alt="">
@@ -108,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="media media-icons media-column">
                             <div class="media-image">
                                 <img src="content/images/icons/secure.svg"  alt="">
@@ -118,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="media media-icons media-column">
                             <div class="media-image">
                                 <img src="content/images/icons/cooling-pads.svg"  alt="">
@@ -139,6 +147,7 @@
                     <p>Keep your home cool, fresh and comfy all summer with V-Guard air coolers. Our range of models offer something for every space and budget. With powerful cooling and easy maintenance, V Guard is the perfect choice for beating the heat.</p>
                 </div>
                 <div class="tabs-grid">
+                    <div class="select-dropdown-active"><span id="select-dropdown-text" class="select-dropdown-text"></span></div>
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <div class="slider"></div>
                         <li class="nav-item" role="presentation">
@@ -201,7 +210,7 @@
                                         <li>Higher Tank Capacity</li>
                                         <li>Up to 40% more thicker honeycomb cooling pads</li>
                                     </ul>
-                                    <a class="btn btn-primary" href="javascript:void(0);">I am interested</a>
+                                    <a class="btn btn-primary" href="javascript:void(0);" data-toggle="modal" data-target="#modal-product-from">I am interested</a>
                                 </div>
                             </div>
                         </div>
@@ -460,7 +469,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="text-center quick-guide-text"><span>Too many coolers confusing you, as which Air Cooler you should buy? Here’s our <a class="" href="javascript:void(0);">quick guide</a> to  help you out?</span></p>
+                <p class="quick-guide-text"><span>Too many coolers confusing you, as which Air Cooler you should buy? Here’s our <a class="" href="javascript:void(0);">quick guide</a> to  help you out?</span></p>
             </div>
         </section>
         <!-- Section Innovations in the air -->
@@ -538,7 +547,7 @@
         <section class="section-video">
             <div class="container">
                 <div class="description-block mw-100 text-left">
-                    <h2>Want to get started with your air cooler? No sweat. <br>Watch the following videos</h2>
+                    <h2>Want to get started with your air cooler? No sweat. <br class="d-none d-xl-block">Watch the following videos</h2>
                 </div>
                 <div class="owl-carousel-full">
                     <div class="owl-carousel owl-theme video-owl-carousel">
@@ -778,10 +787,10 @@
         <section class="section-call-to">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-content">
+                    <div class="col-xl-4 col-content">
                         <h4>V are with you.<br>Every mile. Every smile. </h4>
                     </div>
-                    <div class="col-lg-8 col-icons">
+                    <div class="col-xl-8 col-lg-12 col-icons">
                         <div class="media media-icons media-column">
                             <img src="content/images/icons/phone.svg">
                             <div class="media-body">
@@ -804,27 +813,23 @@
                 </div>
             </div>
         </section>
-        <!-- Floating icon -->
-        <div class="floating-icon-block">
-            <a class="floating-icon" href="javascript:void(0);">
-                <img src="content/images/icons/off-season-button.svg" alt="">
-            </a>
-        </div>
     </main>
     <!-- Footer -->
     <footer>
         <div class="top-tier">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-social">
+                    <div class="col-xl-2 col-lg-3 col-social">
                         <img class="logo" src="content/images/logos/vguard.svg" alt="">
                         <ul class="social-list">
                             <li><a href="javascript:void(0);" target="_blank"><img src="content/images/icons/facebook.svg" alt=""></a></li>
                             <li><a href="javascript:void(0);" target="_blank"><img src="content/images/icons/twitter.svg" alt=""></a></li>
                             <li><a href="javascript:void(0);" target="_blank"><img src="content/images/icons/youtube.svg" alt=""></a></li>
+                            <li><a href="javascript:void(0);" target="_blank"><img src="content/images/icons/instagram.svg" alt=""></a></li>
+                            <li><a href="javascript:void(0);" target="_blank"><img src="content/images/icons/linkedin.svg" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 col-content">
                         <p>The origin of V-Guard dates back to 1977, when Mr. Kochouseph Chittilappilly, with a burning passion to make a difference, set out to build a robust brand in the Indian electrical and electronic goods market. With a small manufacturing unit for voltage stabilizers, a vision and a strong make-do belief, apart from a capital of INR 100,000 that he borrowed from his father and two workers to assist him, he set to sail on his dream.</p>
                         <p>Within a short span of time, V-Guard grew rapidly to become a name synonymous with voltage stabilizers across South India. The company soon expanded its range of products to include Digital UPS, Inverter and Inverter Batteries, Electric Water Heaters, Solar Water Heaters, Domestic Pumps, Agricultural Pumps, Industrial Motors, Domestic Switch Gears, Distribution Boards, Wiring Cables, Industrial Cables, Induction Cooktops, Mixer Grinders, Fans, Gas Stoves, Rice Cookers, Modular Switches, Air Coolers, Water Purifiers and Kitchen Chimneys.</p>
                         <p>Visit our <a href="javascript:void(0);" target="_blank">Corporate website</a> for more details.</p>
@@ -850,6 +855,142 @@
             </div>
         </div>
     </footer>
+    <!-- Modals -->
+    <!-- Off Season Modal -->
+    <div class="modal fade" id="modal-off-season" tabindex="-1" aria-labelledby="modal-off-season-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-off-season-label">Get all the off-season offers by filling out the form!</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-offers-form">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name*">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Mobile Number*">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email ID">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control">
+                                <option>State*</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control">
+                                <option>District*</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control">
+                                <option>City*</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <select class="form-control">
+                                <option>How did you find our website*</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Message if any..."></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Off Season Modal -->
+    <div class="modal fade" id="modal-product-from" tabindex="-1" aria-labelledby="modal-product-from-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-product-from-label">Aikido F70</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-offers-form">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name*">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Mobile Number*">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Address 1">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Address 2">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control">
+                                <option>State*</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control">
+                                <option>District*</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Pin">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="content/scripts/jquery.min.js"></script>
     <script src="content/scripts/bootstrap.bundle.min.js"></script>
