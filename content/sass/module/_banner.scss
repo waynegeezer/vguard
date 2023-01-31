@@ -42,7 +42,7 @@
             }
             @include media-breakpoint-down(xs) {
                 max-height: 290px;
-                border-radius: 0 0 180px 180px !important;
+                border-radius: 0 0 155px 155px !important;
             }
         }
     }
@@ -62,6 +62,9 @@
         }
         @include media-breakpoint-down(md) {
             max-width: 300px;
+        }
+        @include media-breakpoint-down(xs) {
+            max-width: 190px;
         }
     }
     .banner-content {

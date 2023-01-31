@@ -163,6 +163,9 @@
                 @include media-breakpoint-down(lg) {
                     max-width: 350px;
                 }
+                @include media-breakpoint-down(xs) {
+                    max-width: 270px;
+                }
             }
         }
         .product-price {
@@ -183,6 +186,10 @@
             }
             @include media-breakpoint-down(sm) {
                 left: 90px;
+            }
+            @include media-breakpoint-down(xs) {
+                top: 135px;
+                left: 0;
             }
             p {
                 color: $white;
@@ -279,11 +286,17 @@
             @extend %font-size-18;
             font-weight: $font-weight-bold;
             margin: 0;
+            @include media-breakpoint-down(sm) {
+                @include font-size(14px);
+            }
         }
         .custom-checkbox {
             margin-left: 35px;
             @include media-breakpoint-down(sm) {
-                margin-left: 25px;
+                margin-left: 20px;
+            }
+            @include media-breakpoint-down(xs) {
+                margin-bottom: 12px;
             }
         }
     }
@@ -291,6 +304,9 @@
         margin: 40px 0 0;
         @include media-breakpoint-down(sm) {
             margin: 30px 0 0;
+        }
+        @include media-breakpoint-down(xs) {
+            margin: 20px 0 0;
         }
         .col-mobile-hide {
             @include media-breakpoint-down(sm) {
@@ -352,9 +368,6 @@
             @include media-breakpoint-down(sm) {
                 padding: 20px 15px;
             }
-            @include media-breakpoint-down(xs) {
-                justify-content: space-between;
-            }
             .media {
                 padding: 0;
                 margin: 0 25px;
@@ -363,6 +376,9 @@
                 }
                 @include media-breakpoint-down(sm) {
                     margin: 0 25px
+                }
+                @include media-breakpoint-down(xs) {
+                    margin: 0 20px;
                 }
                 &:first-child {
                     margin-left: 0;

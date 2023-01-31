@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS -->
-    <link rel="stylesheet" href="content/css/owl.carousel.min.css">
     <link rel="stylesheet" href="content/css/styles.min.css">
     <title>VGuard - Air Coolers</title>
 </head>
@@ -477,7 +476,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="quick-guide-text"><span>Too many coolers confusing you, as which Air Cooler you should buy? Here’s our <a href="javascript:void(0);">quick guide</a> to  help you out?</span></p>
+                <p class="quick-guide-text"><span>Too many coolers confusing you, as which Air Cooler you should buy? Here’s our <a href="javascript:void(0);" data-toggle="modal" data-target="#modal-quick-guide">quick guide</a> to  help you out?</span></p>
             </div>
         </section>
         <!-- Section Innovations in the air -->
@@ -865,7 +864,7 @@
     </footer>
     <!-- Modals -->
     <!-- Off Season Modal -->
-    <div class="modal fade" id="modal-off-season" tabindex="-1" aria-labelledby="modal-off-season-label" aria-hidden="true">
+    <div class="modal fade modal-form" id="modal-off-season" tabindex="-1" aria-labelledby="modal-off-season-label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
@@ -873,7 +872,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row row-offers-form">
+                    <div class="row row-form">
                         <div class="col-12">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Name*">
@@ -938,8 +937,8 @@
             </div>
         </div>
     </div>
-    <!-- Off Season Modal -->
-    <div class="modal fade" id="modal-product-from" tabindex="-1" aria-labelledby="modal-product-from-label" aria-hidden="true">
+    <!-- Form Modal -->
+    <div class="modal fade modal-form" id="modal-product-from" tabindex="-1" aria-labelledby="modal-product-from-label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
@@ -947,7 +946,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row row-offers-form">
+                    <div class="row row-form">
                         <div class="col-12">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Name*">
@@ -993,6 +992,113 @@
                         </div>
                         <div class="col-12">
                             <button class="btn btn-primary">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quick guide Modal -->
+    <div class="modal fade" id="modal-quick-guide" tabindex="-1" aria-labelledby="modal-quick-guide-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-quick-guide-label">Find an air cooler that’s your type</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="quick-guide-block">
+                        <div class="block-left">
+                            <div class="block-row-header"><div class="block-col">&nbsp;</div></div>
+                            <div class="block-row">
+                                <div class="block-col">
+                                    <div class="image"><img src="content/images/icons/usage.svg" alt=""></div>
+                                    <p>Usage</p>
+                                </div>
+                            </div>
+                            <div class="block-row">
+                                <div class="block-col">
+                                    <div class="image"><img src="content/images/icons/room-type.svg" alt=""></div>
+                                    <p>Room Type</p>
+                                </div>
+                            </div>
+                            <div class="block-row">
+                                <div class="block-col">
+                                    <div class="image"><img src="content/images/icons/room-size-2.png" alt=""></div>
+                                    <p>Room Size</p>
+                                </div>
+                            </div>
+                            <div class="block-row">
+                                <div class="block-col">
+                                    <div class="image"><img src="content/images/icons/climate.svg" alt=""></div>
+                                    <p>Climate</p>
+                                </div>
+                            </div>
+                            <div class="block-row">
+                                <div class="block-col">
+                                    <div class="image"><img src="content/images/icons/element.png" alt=""></div>
+                                    <p>Element</p>
+                                </div>
+                            </div>
+                            <div class="block-row">
+                                <div class="block-col">
+                                    <div class="image"><img src="content/images/icons/capacity-2.svg" alt=""></div>
+                                    <p>Capacity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-right">
+                            <div class="block-right-overflow"> 
+                                <div class="block-row-header">
+                                    <div class="block-col">Desert</div>
+                                    <div class="block-col">Tower</div>
+                                    <div class="block-col">Window</div>
+                                    <div class="block-col">Room</div>
+                                    <div class="block-col">Personal</div>
+                                </div>
+                                <div class="block-row">
+                                    <div class="block-col">Room, Outdoor, Terrace</div>
+                                    <div class="block-col">Personal/Spot Cooling</div>
+                                    <div class="block-col">Personal/Spot Cooling</div>
+                                    <div class="block-col">Personal/Spot Cooling</div>
+                                    <div class="block-col">Personal/Spot Cooling</div>
+                                </div>
+                                <div class="block-row">
+                                    <div class="block-col">Medium to Large</div>
+                                    <div class="block-col">Medium to Large</div>
+                                    <div class="block-col">Medium to Large</div>
+                                    <div class="block-col">Medium to Large</div>
+                                    <div class="block-col">Small to Medium</div>
+                                </div>
+                                <div class="block-row">
+                                    <div class="block-col">More than 300 Sq ft</div>
+                                    <div class="block-col">150 - 300 Sq ft</div>
+                                    <div class="block-col">150 - 300 Sq ft</div>
+                                    <div class="block-col">150 - 300 Sq ft</div>
+                                    <div class="block-col">150 - 300 Sq ft</div>
+                                </div>
+                                <div class="block-row">
+                                    <div class="block-col">Dry</div>
+                                    <div class="block-col">Humid</div>
+                                    <div class="block-col">Humid</div>
+                                    <div class="block-col">Humid</div>
+                                    <div class="block-col">Humid</div>
+                                </div>
+                                <div class="block-row">
+                                    <div class="block-col">Huge Fans</div>
+                                    <div class="block-col">Fans or Blowers</div>
+                                    <div class="block-col">Blower</div>
+                                    <div class="block-col">Fans</div>
+                                    <div class="block-col">Blower</div>
+                                </div>
+                                <div class="block-row">
+                                    <div class="block-col">50 to 90 Litres</div>
+                                    <div class="block-col">22 to 35 litres</div>
+                                    <div class="block-col">Up to 50 litres</div>
+                                    <div class="block-col">Up to 50 litres</div>
+                                    <div class="block-col">22 to 35 litres</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

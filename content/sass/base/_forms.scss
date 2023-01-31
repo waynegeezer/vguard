@@ -36,6 +36,10 @@ input[type=number] {
 textarea {
     resize: none;
     height: 145px !important;
+    padding-top: 15px !important;
+    @include media-breakpoint-down(sm) {
+        height: 190px !important;
+    }
 }
 /* Custom select dropdown */ 
 .custom-select {
@@ -93,6 +97,9 @@ textarea {
     font-weight: $font-weight-semibold;
     padding: 2px 0 0 6px;
     cursor: pointer;
+    @include media-breakpoint-down(sm) {
+        @include font-size(14px);
+    }
     &:before, &:after {
         width: 20px;
         height: 20px;

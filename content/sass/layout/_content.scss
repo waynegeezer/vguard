@@ -82,13 +82,16 @@ section {
             @extend %font-size-24;
             line-height: 30px;
             font-weight: $font-weight-semibold;
+            @include media-breakpoint-down(sm) {
+                line-height: 26px;
+            }
             span {
                 @extend %font-size-16;
                 font-weight: $font-weight-regular;
                 display: block;
                 padding-bottom: 10px;
                 @include media-breakpoint-down(sm) {
-                    line-height: 24px;
+                    line-height: 22px;
                     padding-bottom: 0;
                 }
             }
