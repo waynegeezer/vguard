@@ -7,6 +7,9 @@
         color: $grey-700;
         font-weight: $font-weight-bold;
         padding: 0 15px;
+        @include media-breakpoint-down(sm) {
+            padding: 0 10px;
+        }
         &:first-child {
             img {
                 transform: rotate(90deg) translate(-35%, 85%);
@@ -25,6 +28,10 @@
         border: 2px solid $black-400;
         border-radius: 50% !important;
         margin: 0;
+        @include media-breakpoint-down(sm) {
+            width: 36px;
+            height: 36px;
+        }
         &:hover {
             background-color: $black-400;
             img {
@@ -43,6 +50,9 @@
         border: none;
         background-color: transparent;
         padding: 8px 0;
+        @include media-breakpoint-down(sm) {
+            @include font-size(14px);
+        }
         &:hover {
             color: $black-400;
         }

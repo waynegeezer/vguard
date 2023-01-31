@@ -2,17 +2,35 @@
 .two-column-full-grid {
     margin-top: 60px;
     max-width: 100%;
+    @include media-breakpoint-down(sm) {
+        margin-top: 30px;
+    }
     .row {
         margin-bottom: 40px;
         align-items: center;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 60px;
+        }
         &:last-child {
             margin-bottom: 0;
         }
         .col-text {
+            z-index: 1;
+            @include media-breakpoint-down(md) {
+                margin-top: 25px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-top: 30px;
+            }
             .content {
                 max-width: 565px;
                 @include media-breakpoint-down(lg) {
                     max-width: 100%;
+                }
+            }
+            h4 {
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 20px;
                 }
             }
             p {
@@ -39,6 +57,13 @@
                     border-radius: 160px;
                     object-position: 80% center;
                 }
+                @include media-breakpoint-down(md) {
+                    border-radius: 230px;
+                    display: block;
+                }
+                @include media-breakpoint-down(sm) {
+                    min-height: 225px;
+                }
             }
         }
     }
@@ -47,6 +72,12 @@
             padding-right: 30px;
             @include media-breakpoint-down(lg) {
                 padding-left: 50px;
+            }
+            @include media-breakpoint-down(md) {
+                order: 1;
+            }
+            @include media-breakpoint-down(sm) {
+                padding-left: 30px;
             }
             .content {
                 margin-left: auto;
@@ -60,10 +91,19 @@
                 background: url("../images/pattern/radial-yellow.png") no-repeat center/cover;
                 width: 598px;
                 height: 1210px;
+                @include media-breakpoint-down(sm) {
+                    top: -420px;
+                    width: 340px;
+                    height: 500px;
+                }
             }
             img {
                 border-top-right-radius: 0 !important;
                 border-bottom-right-radius: 0 !important;
+                @include media-breakpoint-down(md) {
+                    max-width: 90%;
+                    margin-left: auto;
+                }
             }
         }
     }
@@ -72,6 +112,9 @@
             padding-left: 30px;
             @include media-breakpoint-down(lg) {
                 padding-right: 50px;
+            }
+            @include media-breakpoint-down(sm) {
+                padding-right: 20px;
             }
             .content {
                 margin-right: auto;

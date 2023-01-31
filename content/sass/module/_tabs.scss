@@ -3,10 +3,13 @@
     margin: 40px 0 35px;
     position: relative;
     z-index: 4;
+    @include media-breakpoint-down(sm) {
+        margin: 30px 0 40px;
+    }
     .select-dropdown-active {
         display: none;
         cursor: pointer;
-        @extend %font-size-18;
+        @extend %font-size-only-18;
         color: $white;
         background-color: $blue-dark;
         border-radius: 150px;
@@ -130,6 +133,9 @@
     }
     .tab-content {
         margin-top: 80px;
+        @include media-breakpoint-down(sm) {
+            margin-top: 50px;
+        }
     }
     .row-single {
         .single-product {
@@ -142,7 +148,12 @@
                 height: 110%;
                 left: -60px;
                 top: -60px;
-            
+                @include media-breakpoint-down(md) {
+                    width: 580px;
+                    height: 480px;
+                    left: 0;
+                    top: -36px;
+                }
             }
             img {
                 position: relative;
@@ -167,9 +178,19 @@
             @include media-breakpoint-down(lg) {
                 top: 180px;
             }
+            @include media-breakpoint-down(md) {
+                left: 130px;
+            }
+            @include media-breakpoint-down(sm) {
+                left: 90px;
+            }
             p {
                 color: $white;
                 margin-bottom: 0;
+                @include media-breakpoint-down(sm) {
+                    @include font-size(20px);
+                    line-height: 28px;
+                }
             }
         }
         .single-product-details {
@@ -178,25 +199,61 @@
             align-items: flex-start;
             justify-content: center;
             margin-top: 35px;
+            @include media-breakpoint-down(sm) {
+                justify-content: space-between;
+                margin: 20px auto 0;
+                max-width: 280px;
+            }
             .media {
                 margin-right: 50px;
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-only(lg) {
                     margin-right: 25px;
+                }
+                @include media-breakpoint-down(sm) {
+                    flex-direction: column;
                 }
                 &:last-child {
                     margin-right: 0;
                 }
+                img {
+                    @include media-breakpoint-down(sm) {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
             }
             .media-body {
                 margin: -8px 0 0 12px;
+                @include media-breakpoint-down(sm) {
+                    margin: 8px 0 0;
+                }
                 p {
                     text-align: center;
                     margin-bottom: 0;
                     span {
                         @extend %font-size-18;
                         display: block;
+                        @include media-breakpoint-down(sm) {
+                            @include font-size(14px);
+                            line-height: 1;
+                        }
                     }
                 }
+            }
+        }
+        .col-content {
+            @include media-breakpoint-down(md) {
+                margin-top: 50px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-top: 40px;
+            }
+        }
+        .btn-primary {
+            @include media-breakpoint-down(sm) {
+                width: 215px;
+                display: block;
+                margin: 0 auto;
             }
         }
     }
@@ -205,6 +262,19 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
+        @include media-breakpoint-down(sm) {
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .product-filter-block {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            @include media-breakpoint-down(sm) {
+                flex: 1;
+            }
+        }
         p {
             @extend %font-size-18;
             font-weight: $font-weight-bold;
@@ -212,10 +282,21 @@
         }
         .custom-checkbox {
             margin-left: 35px;
+            @include media-breakpoint-down(sm) {
+                margin-left: 25px;
+            }
         }
     }
     .row-multiple {
         margin: 40px 0 0;
+        @include media-breakpoint-down(sm) {
+            margin: 30px 0 0;
+        }
+        .col-mobile-hide {
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
     }
     .product-item {
         width: 352px;
@@ -225,6 +306,9 @@
         transition: all .3s;
         @include media-breakpoint-down(lg) {
             width: 100%;
+        }
+        @include media-breakpoint-down(sm) {
+            margin: 0 auto 25px;
         }
         &:hover {
             background-color: $white;
@@ -265,11 +349,20 @@
             border-top: 1px solid $white-200;
             border-radius: 0 0 20px 20px;
             padding: 20px;
+            @include media-breakpoint-down(sm) {
+                padding: 20px 15px;
+            }
+            @include media-breakpoint-down(xs) {
+                justify-content: space-between;
+            }
             .media {
                 padding: 0;
                 margin: 0 25px;
                 @include media-breakpoint-down(lg) {
                     margin: 0 12px;
+                }
+                @include media-breakpoint-down(sm) {
+                    margin: 0 25px
                 }
                 &:first-child {
                     margin-left: 0;
@@ -302,7 +395,7 @@
             }
         }
         .product-name {
-            @extend %font-size-18;
+            @extend %font-size-only-18;
             font-weight: $font-weight-bold;
         }
         .product-price {

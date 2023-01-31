@@ -39,7 +39,15 @@ $(document).ready(function() {
 		margin:20,
 		autoWidth:true,
 		dots:true,
-		items:3
+		items:3,
+		responsive:{
+			0:{
+				margin:15
+			},
+			768:{
+				margin:20
+			}
+		}
 	});
 
 	$('select').customSelect();

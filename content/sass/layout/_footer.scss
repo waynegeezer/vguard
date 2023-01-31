@@ -14,30 +14,58 @@ footer {
                 flex: 0 0 19%;
                 max-width: 19%;
             }
+            @include media-breakpoint-down(md) {
+                margin-bottom: 40px;
+            }
         }
         .logo {
             width: 200px;
             margin-left: -8px;
+            @include media-breakpoint-down(md) {
+                margin: 0 auto;
+                display: block;
+            }
         }
         .social-list {
             display: flex;
             flex-flow: row wrap;
             margin-top: 25px;
             list-style-type: none;
+            @include media-breakpoint-down(md) {
+                justify-content: center
+            }
+            @include media-breakpoint-down(sm) {
+                margin-top: 15px;
+            }
             li {
                 margin-right: 12px;
+                a {
+                    width: 28px;
+                    height: 28px;
+                    background-color: $grey-800;
+                    border-radius: 50%;
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    justify-content: center;
+                }
                 &:last-child {
                     margin-right: 0;
                 }
             }
         }
         .col-content {
-            padding-left: 25px;
+            @include media-breakpoint-up(lg) {
+                padding-left: 25px;
+            }
         }
         p {
             @extend %font-size-16;
             line-height: 22px;
             color: $white;
+            @include media-breakpoint-down(sm) {
+                @include font-size(14px);
+            }
             a {
                 color: $blue-200;
                 font-weight: $font-weight-semibold;
@@ -47,6 +75,9 @@ footer {
     .bottom-tier {
         padding: 25px 0 0;
         border-top: 1px solid $grey-300;
+        @include media-breakpoint-down(sm) {
+            padding: 30px 0 0;
+        }
         .company-block {
             display: flex;
             flex-flow: row wrap;
@@ -62,6 +93,9 @@ footer {
             @include media-breakpoint-down(lg) {
                 order: 2;
             }
+            @include media-breakpoint-down(sm) {
+                @include font-size(12px);
+            }
         }
         .phone-list, .copyright-list {
             list-style-type: none;
@@ -71,6 +105,9 @@ footer {
                 @extend %font-size-16;
                 padding: 0 15px;
                 border-right: 1px solid;
+                @include media-breakpoint-down(sm) {
+                    @include font-size(14px);
+                }
                 &:first-child {
                     padding-left: 0;
                 }
@@ -91,6 +128,9 @@ footer {
             justify-content: center;
             @include media-breakpoint-down(lg) {
                 margin: 40px 0;
+            }
+            @include media-breakpoint-down(sm) {
+                margin: 30px 0;
             }
             li, a {
                 color: $grey-500;

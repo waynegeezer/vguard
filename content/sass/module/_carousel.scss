@@ -1,15 +1,27 @@
 /* Video carousel */
 .owl-carousel-full {
     width: 125%;
+    @include media-breakpoint-down(sm) {
+        width: 115%;
+    }
     .owl-dots {
         width: 80%;
+        @include media-breakpoint-down(sm) {
+            width: 90%;
+        }
     }
 }
 .video-owl-carousel {
     margin-top: 55px;
+    @include media-breakpoint-down(sm) {
+        margin-top: 35px;
+    }
     .video-item {
         width: 392px;
         position: relative;
+        @include media-breakpoint-down(sm) {
+            width: 305px;
+        }
         img {
             width: 100%;
             position: relative;
@@ -47,11 +59,18 @@
                 height: 48px;
                 background: url("../images/icons/play.svg") no-repeat center/cover;
                 z-index: 2;
+                @include media-breakpoint-down(sm) {
+                    width: 36px;
+                    height: 36px;
+                }
             }
         }
     }
     .owl-dots {
         margin-top: 40px !important;
+        @include media-breakpoint-down(sm) {
+            margin-top: 30px !important;
+        }
         .owl-dot {
             span {
                 background-color: rgba($color-primary, 0.5);

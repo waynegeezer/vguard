@@ -36,6 +36,14 @@
                 min-height: auto;
                 border-radius: 0 0 340px 340px !important;
             }
+            @include media-breakpoint-down(sm) {
+                max-height: 400px;
+                border-radius: 0 0 250px 250px !important;
+            }
+            @include media-breakpoint-down(xs) {
+                max-height: 290px;
+                border-radius: 0 0 180px 180px !important;
+            }
         }
     }
     .banner-product {
@@ -52,6 +60,9 @@
             max-width: 398px;
             margin: 0 auto;
         }
+        @include media-breakpoint-down(md) {
+            max-width: 300px;
+        }
     }
     .banner-content {
         max-width: 415px;
@@ -61,14 +72,25 @@
             margin: 0 auto;
             text-align: center;
         }
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+            padding: 0 20px;
+            margin-bottom: 25px;
+        }
         .hastag {
             @extend %font-size-24;
             font-weight: $font-weight-bold;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 10px;
+            }
         }
     }
     .col-banner-product-content {
         @include media-breakpoint-down(lg) {
             margin-top: -150px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-top: -80px;
         }
     }
 }

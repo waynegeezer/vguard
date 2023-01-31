@@ -1,9 +1,9 @@
 /* Common Elements */
 section {
     padding: 30px 0;
-}   
-main {
-
+    @include media-breakpoint-down(sm) {
+        padding: 25px 0;
+    }
 }
 .container {
     max-width: 1220px;
@@ -11,6 +11,9 @@ main {
     @include media-breakpoint-down(lg) {
         max-width: 100%;
         padding: 0 50px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 0 20px;
     }
 }
 /* aos */
@@ -28,6 +31,9 @@ main {
 }
 .row-media {
     margin-top: 40px;
+    @include media-breakpoint-down(sm) {
+        margin-top: 35px;
+    }
 }
 .media-icons {
     padding-bottom: 15px;
@@ -81,6 +87,10 @@ main {
                 font-weight: $font-weight-regular;
                 display: block;
                 padding-bottom: 10px;
+                @include media-breakpoint-down(sm) {
+                    line-height: 24px;
+                    padding-bottom: 0;
+                }
             }
         }
     }
@@ -115,16 +125,33 @@ main {
     h2, p {
         text-align: center;
     }
+    h2 {
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+    }
 } 
 /* list with ticks */
 .list-tick {
     list-style-type: none;
     margin: 35px 0 45px;
+    @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        margin: 25px 0 40px;
+    }
     li {
         @extend %font-size-18;
         margin-bottom: 30px;
         padding: 3px 0 3px 52px;
         position: relative;
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+            margin-bottom: 25px;
+            width: 50%;
+            padding-right: 20px;
+        }
         &:before {
             content: "";
             position: absolute;
@@ -133,6 +160,11 @@ main {
             background: url("../images/icons/tick.svg") no-repeat center/cover;
             width: 32px;
             height: 32px;
+            @include media-breakpoint-down(sm) {
+                position: relative;
+                display: block;
+                margin-bottom: 10px;
+            }
         }
         &:last-child {
             margin-bottom: 0;
@@ -150,6 +182,9 @@ main {
         background: url("../images/pattern/radial-dual.png") no-repeat center/cover;
         width: 100%;
         min-height: 1283px;
+        @include media-breakpoint-down(sm) {
+            min-height: 810px;
+        }
     }
     + section {
         position: relative;

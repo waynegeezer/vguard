@@ -2,6 +2,9 @@
 .section-call-to {
     background-color: $black-400;
     position: relative;
+    @include media-breakpoint-down(sm) {
+        padding: 35px 0 40px;
+    }
     .row {
         align-items: center;
     }
@@ -9,6 +12,9 @@
         h4 {
             color: $white;
             margin-bottom: 0;
+            @include media-breakpoint-down(sm) {
+                @include font-size(30px);
+            }
         }
     }
     .col-icons {
@@ -19,6 +25,9 @@
         }
         p {
             color: $white;
+            @include media-breakpoint-down(sm) {
+                @include font-size(20px);
+            }
             a {
                 color: $white;
                 @extend %hover-text;
@@ -31,6 +40,10 @@
         @include media-breakpoint-down(lg) {
             width: 33.3%;
         }
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 25px 0;
+        }
         &:before {
             display: none;
         }
@@ -42,12 +55,26 @@
             width: 1px;
             height: 60px;
             background-color: $grey-200;
+            @include media-breakpoint-down(sm) {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: auto;
+                width: 62px;
+                height: 1px;
+            }
         }
         &:first-child {
             padding-left: 0;
+            @include media-breakpoint-down(sm) {
+                padding-top: 0;
+            }
         }
         &:last-child {
             padding-right: 0;
+            @include media-breakpoint-down(sm) {
+                padding-bottom: 0;
+            }
             &:after {
                 display: none;
             }

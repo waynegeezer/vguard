@@ -1,6 +1,6 @@
 /* Default Form Layouts */ 
 .form-control, .custom-select {
-    @extend %font-size-18;
+    @extend %font-size-only-18;
     color: $grey-700;
     font-weight: $font-weight-regular;
     border-color: $grey-700;
@@ -55,14 +55,14 @@ textarea {
         }
     }
     .custom-select__option {
-        @extend %font-size-18;
+        @extend %font-size-only-18;
         color: $grey-700;
         font-weight: $font-weight-regular;
         margin: 0;
         padding: 0;
         border: none;
         background-color: transparent;
-        padding: 15px 20px;
+        padding: 15px 35px 15px 20px;
         &:after {
             background: url("../images/icons/chevron-down.svg") no-repeat center/cover;
             width: 14px;
