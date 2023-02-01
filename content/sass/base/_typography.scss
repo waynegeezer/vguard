@@ -55,9 +55,10 @@ p {
 }
 %font-size-28 {
     @include font-size(28px);
-    line-height: 1;
+    line-height: 32px;
     @include media-breakpoint-down(sm) {
         @include font-size(24px);
+        line-height: 28px;
     }
 }
 %font-size-24 {
@@ -74,7 +75,7 @@ p {
 }
 %font-size-only-20 {
     @include font-size(20px);
-    line-height: 1;
+    line-height: 24px;
 }
 %font-size-only-18 {
     @include font-size(18px);

@@ -228,7 +228,7 @@ section {
     }
 } 
 /* Thank you block */
-.thank-you-block {
+.thank-you-block, .thank-you-block-single {
     .product-block {
         position: relative;
         max-width: 161px;
@@ -282,3 +282,18 @@ section {
         color: $grey-200;
     }
 } 
+.thank-you-block-single {
+    .product-block {
+        max-width: 100%;
+        &:before {
+            display: none;
+        }
+        .icon-thumbs {
+            position: relative;
+            top: 0;
+            display: block;
+            margin: 0 auto;
+            width: 90px;
+        }
+    }
+}
