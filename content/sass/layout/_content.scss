@@ -224,3 +224,58 @@ section {
         }
     }
 } 
+/* Thank you block */
+.thank-you-block {
+    .product-block {
+        position: relative;
+        max-width: 161px;
+        display: block;
+        margin: 0 auto 30px;
+        @include media-breakpoint-down(sm) {
+            margin: 0 auto 20px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -125px;
+            left: -175px;
+            right: 0;
+            margin: auto;
+            background: url("../images/pattern/radial-pattern-2.svg") no-repeat center/cover;
+            width: 447px;
+            height: 449px;
+            z-index: 0;
+            @include media-breakpoint-down(xs) {
+                top: -100px;
+                left: -155px;
+                width: 415px;
+                height: 417px;
+            }
+        }
+        img {
+            position: relative;
+            z-index: 1;
+        }
+        .product-image {
+            width: 100%;
+        }
+        .icon-thumbs {
+            position: absolute;
+            right: 0;
+            top: 50px;
+            box-shadow: 0 4px 30px rgba($blue, 0.25);
+            border-radius: 50%;
+        }
+    }
+    h2, p {
+        text-align: center;
+    }
+    h2 {
+        @extend %font-size-28;
+        color: $color-primary;
+    }
+    p {
+        @extend %font-size-only-20;
+        color: $grey-200;
+    }
+} 

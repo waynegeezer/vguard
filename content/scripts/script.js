@@ -66,10 +66,15 @@ $(document).ready(function() {
 
 	$('.modal').on('show.bs.modal', function () {
 		$("html").addClass("overflow-hidden");
-	})
+	});
+
+	$('.modal').on('shown.bs.modal', function () {
+		$("body").addClass("modal-open");
+	});
+
 	$('.modal').on('hide.bs.modal', function () {
 		$("html").removeClass("overflow-hidden");
-	})
+	});
 
 	$(".navbar-toggler").click(function() {
 		$("header").toggleClass("header-open");
