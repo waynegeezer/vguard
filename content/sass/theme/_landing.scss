@@ -26,6 +26,8 @@
     }
 }
 .section-video {
+    position: relative;
+    z-index: 2;
     @include media-breakpoint-up(md) {
         padding-top: 70px;
     }

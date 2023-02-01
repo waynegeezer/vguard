@@ -46,6 +46,7 @@
     .modal-content {
         border-radius: 8px;
         padding: 30px 60px 35px;
+        border: none;
         @include media-breakpoint-down(md) {
             padding: 30px 20px 35px;
         }
@@ -298,6 +299,43 @@
     .modal-header {
         @include media-breakpoint-down(sm) {
             padding: 0 0 15px;
+        }
+    }
+}
+.modal-video {
+    .modal-xl {
+        @include media-breakpoint-down(sm) {
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .modal-content {
+        padding: 0;
+        background-color: transparent;
+    }
+    .modal-header {
+        padding: 0 0 15px;
+        .close {
+            filter: invert(98%) sepia(96%) saturate(0%) hue-rotate(309deg) brightness(112%) contrast(101%);
+            right: 0;
+            top: 0;
+        }
+    }
+    .video-block {
+        margin-top: 35px;
+        iframe {
+            width: 100%;
+            height: 530px;
+            @include media-breakpoint-down(lg) {
+                height: 480px;
+            }
+            @include media-breakpoint-down(md) {
+                height: 390px;
+            }
+            @include media-breakpoint-down(xs) {
+                height: 210px;
+            }
         }
     }
 }

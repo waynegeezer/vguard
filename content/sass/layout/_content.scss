@@ -19,10 +19,13 @@ section {
 /* aos */
 @include media-breakpoint-down(lg) {
     [data-aos^=fade][data-aos^=fade] {
-        opacity: 1;
+        opacity: 1 !important;
     }
     [data-aos=fade-up] {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0) !important;
+    }
+    [data-aos] {
+        pointer-events: revert !important;
     }
 }
 /* media icons */

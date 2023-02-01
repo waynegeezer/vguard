@@ -10,15 +10,15 @@ var screenWidth = $(window).width();
 // });
 
 /* AOS */ 
-// $(window).on("load resize", function () {
-//     if ($(window).width() > 1199) {
-//         AOS.init({
-//             disable:"mobile,tablet,phone",
-//             duration:1000,
-//             once: true
-//         });
-//     }
-// });
+$(window).on("load resize", function () {
+    if ($(window).width() > 1199) {
+		AOS.init({
+		disable:"mobile,tablet,phone",
+			duration:1000,
+			once: true
+		});
+    }
+ });
 
 
 $(document).ready(function() {
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 
 	$('.video-owl-carousel').owlCarousel({
-		loop:true,
+		loop:false,
 		margin:20,
 		autoWidth:true,
 		dots:true,
@@ -102,9 +102,17 @@ $(document).ready(function() {
 	var activeText = $('.nav-pills .nav-link.active').text();
 	$("#select-dropdown-text").html(activeText);
 
-	$(document).on("click", function(e) {
-		
+	$(".video-item a").click(function(e) {
+		e.preventDefault();
+		var url = $(this).attr('href');
+		var source = document.getElementById('video-iframe');
+		source.setAttribute('src', url);
 	});
+
+	$('#modal-video').on('hide.bs.modal', function () {
+		var source = document.getElementById('video-iframe');
+		source.setAttribute('src', "");
+	})
 });
 
 $(window).on('resize scroll', function() {

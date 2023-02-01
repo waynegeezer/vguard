@@ -92,11 +92,11 @@ header {
         @include media-breakpoint-down(md) {
             margin-top: 0;
             padding: 70px 50px 0;
+            height: 100%;
+            overflow-y: auto;
         }
         @include media-breakpoint-down(sm) {
             padding: 50px 40px 0;
-            height: 100%;
-            overflow-y: auto;
         }
         .nav-item {
             margin-right: 25px;
@@ -117,7 +117,7 @@ header {
             display: none;
             margin-top: 90px;
             padding-bottom: 20px;
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 display: block;
             }
             p {
