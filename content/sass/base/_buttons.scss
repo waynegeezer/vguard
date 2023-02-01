@@ -7,9 +7,12 @@
     background: linear-gradient(90deg, $orange-300, $orange-200 44.35%);
     box-shadow: 0 4px 30px rgba($black, 0.25);
     border-radius: 100px;
-    border: none;
+    border: none !important;
     background-size: 150% auto;
     &:hover {
         animation: shine 3s linear infinite;
+    }
+    &:focus {
+        box-shadow: 0 4px 30px rgba($black, 0.25);
     }
 }

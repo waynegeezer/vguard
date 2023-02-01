@@ -14643,12 +14643,15 @@ p {
   background: linear-gradient(90deg, #FEBC10, #F7941D 44.35%);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   border-radius: 100px;
-  border: none;
+  border: none !important;
   background-size: 150% auto;
 }
 .btn-primary:hover {
   -webkit-animation: shine 3s linear infinite;
           animation: shine 3s linear infinite;
+}
+.btn-primary:focus {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* Default Form Layouts */
