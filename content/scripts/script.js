@@ -1,13 +1,13 @@
 var screenWidth = $(window).width();
-// $(window).scroll(function(){
-// 	scroll = $(window).scrollTop();
-// 	if (scroll >= 50) {
-// 		$(".navbar").addClass("sticky-header");
-// 	}
-// 	else {
-// 		$(".navbar").removeClass("sticky-header");
-// 	}
-// });
+$(window).scroll(function(){
+	scroll = $(window).scrollTop();
+	if (scroll >= 50) {
+		$(".navbar").addClass("sticky-header");
+	}
+	else {
+		$(".navbar").removeClass("sticky-header");
+	}
+});
 
 /* AOS */ 
 $(window).on("load resize", function () {
@@ -50,16 +50,6 @@ $(document).ready(function() {
 	});
 
 	$('select').customSelect();
-
-	$("header .nav-link").on('click', function(event) {
-		if (this.hash !== "") {
-			event.preventDefault();
-			var hash = this.hash;
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			}, 800);
-		}
-	});
 
 	$('.modal').on('show.bs.modal', function () {
 		$("html").addClass("overflow-hidden");
@@ -109,25 +99,54 @@ $(document).ready(function() {
 	$('#modal-video').on('hide.bs.modal', function () {
 		var source = document.getElementById('video-iframe');
 		source.setAttribute('src', "");
-	})
+	});
+});
+
+$(window).on('load resize', function() {
+	if(screenWidth >= 1200) {
+		// Parallax effect 
+		$(".section-banner .banner-gradient").paroller({ factor: 0.2, factorXs: 0, type: 'background', direction: 'vertical' });
+		$(".radial-gradient").paroller({ factor: 0.3, factorXs: 0, type: 'background', direction: 'vertical' });
+		$(".two-column-gradient-right").paroller({ factor: 0.35, factorXs: 0, type: 'background', direction: 'vertical' });
+		$(".two-column-gradient-left").paroller({ factor: 0.2, factorXs: 0, type: 'background', direction: 'vertical' });
+		// Tilt
+		$('.js-tilt img').tilt({
+			maxTilt: 15,
+			scale: 1.2,
+			perspective: 200,
+			speed: 1000,
+			transition: true
+		});
+	}
+
+	var navHeight = $(".navbar").height();
+	$("header .nav-link").on('click', function(event) {
+		if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top - navHeight
+			}, 800);
+		}
+	});
 });
 
 $(window).on('resize scroll', function() {
 	var hHeight = $("html").height(),
 		scrollTop = $(window).scrollTop(),
-		percent   = ((scrollTop)/hHeight);
+		percent = ((scrollTop)/hHeight);
 
 	if(screenWidth >= 1200) {
 		if ($('.section-tried-tested').isInViewport()) {
-			$(".col-image img").css("border-radius", (percent * 300 )+ "px");
+			$(".col-image img").css("border-radius", (percent * 400 )+ "px");
 		} else {
 			$(".col-image img").css("border-radius", "100px");
 		}
 	
-		if (scrollTop < 80) {
-			$(".banner-bg-block img").css("border-radius", "90px");
+		if (scrollTop < 120) {
+			$(".banner-bg-block img").css("border-radius", "150px");
 		} else {
-			$(".banner-bg-block img").css("border-radius", (percent * 7000) + "px");
+			$(".banner-bg-block img").css("border-radius", (percent * 8000) + "px");
 		}
 	}
 

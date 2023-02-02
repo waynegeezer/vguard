@@ -5,14 +5,16 @@
     text-transform: uppercase;
     padding: 12px 30px;
     background: linear-gradient(90deg, $orange-300, $orange-200 44.35%);
-    box-shadow: 0 4px 30px rgba($black, 0.25);
+    box-shadow: 0 4px 30px rgba($black, 0.2);
     border-radius: 100px;
     border: none !important;
     background-size: 150% auto;
+    transition: all .4s;
     &:hover {
-        animation: shine 3s linear infinite;
+        animation: shine 2s linear infinite;
+        box-shadow: 0 4px 30px rgba($black, 0.3);
     }
     &:focus {
-        box-shadow: 0 4px 30px rgba($black, 0.25);
+        box-shadow: 0 4px 30px rgba($black, 0.3);
     }
 }

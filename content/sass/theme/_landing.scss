@@ -19,6 +19,7 @@
     }
 }
 .section-innovations {
+    position: relative;
     &:before {
         @include media-breakpoint-down(sm) {
             display: none;
@@ -40,13 +41,14 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    z-index: 4;
     @include media-breakpoint-down(md) {
         line-height: 24px;
         text-align: left;
     }
     @include media-breakpoint-down(sm) {
-        line-height: 18px;
+        @include font-size(14px);
+        line-height: 22px;
         margin-bottom: 0;
         align-items: flex-start;
     }
@@ -73,9 +75,6 @@
     span {
         @include media-breakpoint-down(md) {
             flex: 1;
-        }
-        @include media-breakpoint-down(sm) {
-            @include font-size(12px);
         }
     }
 }

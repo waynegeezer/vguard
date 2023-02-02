@@ -178,22 +178,22 @@ section {
     }
 } 
 /* background radials */
-.section-radial-bg {
-    position: relative;
-    &:before {
-        content: "";
-        position: absolute;
-        top: -300px;
-        left: 0;
-        background: url("../images/pattern/radial-dual.png") no-repeat center/cover;
-        width: 100%;
-        min-height: 1283px;
-        @include media-breakpoint-down(sm) {
-            min-height: 810px;
-        }
+.radial-gradient {
+    background: url("../images/pattern/radial-dual.png") no-repeat center/contain;
+    width: 100%;
+    min-height: 1700px;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    @include media-breakpoint-up(xxl) {
+        min-height: 2175px;
     }
-    + section {
-        position: relative;
+    @include media-breakpoint-down(lg) {
+        min-height: 1283px;
+        background-size: cover;
+    }
+    @include media-breakpoint-down(sm) {
+        min-height: 810px;
     }
 } 
 /* Floating icon - off season */
@@ -213,6 +213,7 @@ section {
     a {
         display: block;
         width: 220px;
+        position: relative;
         @include media-breakpoint-down(lg) {
             width: 180px;
         }

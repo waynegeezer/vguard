@@ -12,9 +12,9 @@
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-            <a class="navbar-brand" href="#">
-                <img src="content/images/logos/vguard.svg" alt="">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="javascript:void(0);">
+                <img src="content/images/logos/vguard.png" alt="">
             </a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
             </button>
@@ -51,6 +51,7 @@
         <!-- Section Banner -->
         <section class="section-banner">
             <div class="row banner-row">
+                <div class="banner-gradient"></div>
                 <div class="col-xl-6 col-banner-bg">
                     <div class="banner-bg-block" data-aos="fade-up" data-aos-delay="200">
                         <img src="content/images/banner/air-cooler.jpg" alt="">
@@ -180,7 +181,10 @@
                             <div class="row row-single">
                                 <div class="col-lg-6">
                                     <div class="single-product">
-                                        <img src="content/images/product/air-cooler-lg.png" alt="">
+                                        <span class="js-tilt data-tilt">
+                                            <img class="product-gradient" src="content/images/pattern/radial-product-gradient.svg" alt="">
+                                        </span>
+                                        <img class="product" src="content/images/product/air-cooler-lg.png" alt="">
                                         <div class="product-price">
                                             <p>₹10,680.00</p>
                                         </div>
@@ -1441,7 +1445,8 @@
             </div>
         </section>
         <!-- Section Innovations in the air -->
-        <section class="section-innovations section-radial-bg" id="technology">
+        <section class="section-innovations" id="technology">
+            <div class="radial-gradient"></div>
             <div class="container">
                 <div class="description-block mw-1030" data-aos="fade-up" data-aos-delay="200">
                     <h2>Innovation is in the air</h2>
@@ -1582,6 +1587,7 @@
             </div>
             <div class="two-column-full-grid">
                 <div class="row row-text">
+                    <div class="two-column-gradient-right"></div>
                     <div class="col-lg-6 col-text" data-aos="fade-up" data-aos-delay="250">
                         <div class="content">
                             <h4>A legacy of 45+ years, serving 60 million+ Indians!</h4>
@@ -1593,6 +1599,7 @@
                     </div>
                 </div>
                 <div class="row row-image">
+                    <div class="two-column-gradient-left"></div>
                     <div class="col-lg-6 col-image" data-aos="fade-up" data-aos-delay="250">
                         <img src="content/images/banner/quality-control.jpg" alt="">
                     </div>
@@ -1788,7 +1795,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-2 col-lg-3 col-social">
-                        <img class="logo" src="content/images/logos/vguard-grey.jpg" alt="">
+                        <img class="logo" src="content/images/logos/vguard.png" alt="">
                         <ul class="social-list">
                             <li><a href="javascript:void(0);" target="_blank"><img src="content/images/icons/facebook.svg" alt=""></a></li>
                             <li><a href="javascript:void(0);" target="_blank"><img src="content/images/icons/twitter.svg" alt=""></a></li>
@@ -2185,6 +2192,8 @@
     <script src="content/scripts/owl-carousel.min.js"></script>
     <script src="content/scripts/aos.min.js"></script>
     <script src="content/scripts/custom-select.min.js"></script>
+    <script src="content/scripts/paroller.min.js"></script>
+    <script src="content/scripts/tilt.min.js"></script>
     <script src="content/scripts/script.min.js"></script>
 </body>
 </html>

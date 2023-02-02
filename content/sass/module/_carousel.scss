@@ -1,11 +1,17 @@
 /* Video carousel */
 .owl-carousel-full {
     width: 125%;
+    @include media-breakpoint-up(xxl) {
+        width: 135%;
+    }
     @include media-breakpoint-down(sm) {
         width: 115%;
     }
     .owl-dots {
         width: 80%;
+        @include media-breakpoint-up(xxl) {
+            width: 70%;
+        }
         @include media-breakpoint-down(sm) {
             width: 90%;
         }

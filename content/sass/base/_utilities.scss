@@ -47,6 +47,30 @@ ul {
 		background-position: 0% 50%;
 	}
 }
+// @-webkit-keyframes slide {
+// 	0% {
+// 		transform:translateX(-100%);
+// 	}
+// 	100% {
+// 		transform:translateX(100%);
+// 	}
+// }
+// @keyframes slide {
+// 	0% {
+// 		transform:translateX(-100%);
+// 	}
+// 	100% {
+// 		transform:translateX(100%);
+// 	}
+// }
+@keyframes scale {
+    0% {
+		transform: scale(1);
+	}
+    100% {
+		transform: scale(1.1);
+	}
+}
 /* hover */
 %hover-text {
 	&:hover {

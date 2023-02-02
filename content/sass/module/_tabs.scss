@@ -16,6 +16,7 @@
         height: 48px;
         padding: 15px 35px;
         position: relative;
+        z-index: 2;
         @include media-breakpoint-down(md) {
             display: block;
         }
@@ -52,6 +53,7 @@
     .nav-pills {
         justify-content: center;
         position: relative;
+        z-index: 1;
         @include media-breakpoint-down(md) {
             flex-direction: column;
             position: absolute;

@@ -1,6 +1,6 @@
 /* Navigation */ 
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0;
     top: 0;
@@ -12,28 +12,67 @@ header {
 .navbar {
     padding: 0;
     align-items: flex-start;
+    background-color: transparent;
+    transition: all .2s;
     @include media-breakpoint-down(lg) {
         padding: 0 50px;
     }
     @include media-breakpoint-down(md) {
-        padding: 15px 50px 0;
+        padding: 15px 50px;
         align-items: center;
+        min-height: 74px;
     }
     @include media-breakpoint-down(sm) {
-        padding: 15px 15px 0;
-        min-height: 60px;
+        padding: 15px;
+    }
+    &.sticky-header {
+        background-color: $black-400;
+        filter: drop-shadow(0 6px 14px rgba($black, 0.24));
+        &:before {
+            display: none;
+        }
+        .navbar-nav {
+            .nav-link {
+                color: $white-300;
+                @include media-breakpoint-down(md) {
+                    color: $color-primary;
+                }
+                &:hover {
+                    text-shadow: 0 0 .65px $white-300, 0 0 .65px $white-300;
+                    @include media-breakpoint-down(md) {
+                        text-shadow: 0 0 .65px $black-200, 0 0 .65px $black-200;
+                    }
+                }
+            }
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            background: linear-gradient(90deg, $orange-300 0%, $orange-200 100%);
+            width: 100%;
+            height: 5px;
+        }
+        .navbar-toggler {
+            filter: invert(98%) sepia(3%) saturate(23%) hue-rotate(228deg) brightness(114%) contrast(89%);
+        }
     }
     &:before {
         content: "";
         position: absolute;
-        top: -1px;
+        top: -30px;
         left: 0;
         background: url("../images/pattern/logo-pattern.svg") no-repeat center/contain;
         width: 433px;
         height: 197px;
+        transition: all .3s;
         @include media-breakpoint-down(lg) {
             width: 400px;
             height: 184px;
+            top: -50px;
+            left: -1px;
         }
         @include media-breakpoint-down(md) {
             width: 335px;
@@ -50,10 +89,10 @@ header {
     .navbar-brand {
         width: 155px;
         padding: 0;
-        margin: 27px 0 0 70px;
+        margin: 10px 0 10px 70px;
         z-index: 1;
         @include media-breakpoint-down(lg) {
-            margin: 27px 0 0;
+            margin: 10px 0;
             width: 135px;
         }
         @include media-breakpoint-down(md) {
@@ -79,7 +118,7 @@ header {
             width: 100%;
             left: 0;
             top: 0;
-            margin-top: 60px;
+            margin-top: 74px;
             background-color: $white;
             transition: all .05s;
         }
@@ -173,6 +212,7 @@ header {
             background: url("../images/icons/menu-close.svg") no-repeat center/cover;
             width: 44px;
             height: 44px;
+            // transition: all .5s;
         }
         // &.collapsed {
         //     transform: rotate(0);

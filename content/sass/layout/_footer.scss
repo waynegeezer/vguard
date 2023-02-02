@@ -94,6 +94,8 @@ footer {
             }
             @include media-breakpoint-down(sm) {
                 @include font-size(12px);
+                width: 100%;
+                text-align: center;
             }
         }
         .phone-list, .copyright-list {
