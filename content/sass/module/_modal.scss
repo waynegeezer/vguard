@@ -229,10 +229,39 @@
             @include media-breakpoint-down(md) {
                 margin: 0;
             }
-            img {
+            &:before {
+                width: 420px;
+                height: 421px;
+                @include media-breakpoint-down(lg) {
+                    width: 330px;
+                    height: 331px;
+                }
+                @include media-breakpoint-down(md) {
+                    left: 0;
+                    right: 0;
+                    top: 30px;
+                    margin: auto;
+                }
+            }
+            .product {
                 max-width: 305px;
                 @include media-breakpoint-down(sm) {
                     max-width: 280px;
+                }
+            }
+            .product-gradient {
+                opacity: 1;
+                width: 100%;
+                left: 0;
+                top: -50px;
+                @include media-breakpoint-down(lg) {
+                    top: 0;
+                }
+                @include media-breakpoint-down(md) {
+                    top: -145px;
+                }
+                @include media-breakpoint-down(xs) {
+                    top: 0;
                 }
             }
         }

@@ -117,7 +117,7 @@
                 @include media-breakpoint-down(sm) {
                     @include font-size(18px);
                 }
-                span {
+                > span {
                     @extend %font-size-54;
                     color: $black-300;
                     font-weight: $font-weight-bold;

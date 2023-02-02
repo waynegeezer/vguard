@@ -13,6 +13,10 @@
             @include media-breakpoint-up(xl) {
                 animation: scale 2s infinite alternate;
             }
+            @include media-breakpoint-down(lg) {
+                width: 405px;
+                height: 406px;
+            }
             @include media-breakpoint-down(md) {
                 left: 50px;
                 top: -36px;
@@ -27,6 +31,11 @@
                 width: 310px;
                 height: 311px;
                 left: 0;
+            }
+        }
+        &:hover {
+            .product-gradient {
+                opacity: 1;
             }
         }
         .product {
@@ -46,8 +55,13 @@
             left: -125px;
             top: -110px;        
             margin: auto;
+            opacity: 0.4;
+            transition: opacity .3s;
             @include media-breakpoint-down(lg) {
+                left: 0;
+                top: -35px;
                 width: 100%;
+                opacity: 1;
             }
             @include media-breakpoint-down(sm) {
                 left: 0;
@@ -96,6 +110,8 @@
         align-items: flex-start;
         justify-content: center;
         margin-top: 35px;
+        position: relative;
+        z-index: 2;
         @include media-breakpoint-down(sm) {
             justify-content: space-between;
             margin: 20px auto 0;
