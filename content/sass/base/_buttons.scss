@@ -12,9 +12,9 @@
     transition: all .4s;
     &:hover {
         animation: shine 2s linear infinite;
-        box-shadow: 0 4px 30px rgba($black, 0.3);
+        box-shadow: 0 4px 45px rgba($black, 0.45);
     }
     &:focus {
-        box-shadow: 0 4px 30px rgba($black, 0.3);
+        box-shadow: 0 4px 45px rgba($black, 0.45);
     }
 }
