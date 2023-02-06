@@ -49,7 +49,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('select').customSelect();
+	// $('select').customSelect();
 
 	$('.modal').on('show.bs.modal', function () {
 		$("html").addClass("overflow-hidden");
