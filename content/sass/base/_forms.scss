@@ -1,5 +1,5 @@
 /* Default Form Layouts */ 
-.form-control, .custom-select {
+.form-control {
     @extend %font-size-only-18;
     color: $grey-700;
     font-weight: $font-weight-regular;
@@ -14,6 +14,9 @@
         box-shadow: none;
         border-color: $grey-700;
     }
+}
+select {
+    cursor: pointer;
 }
 ::placeholder { 
     color: $grey-700;

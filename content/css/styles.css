@@ -15753,7 +15753,7 @@ p {
   line-height: 24px;
 }
 
-.modal-multiproduct-form .modal-footer button, .quick-guide-block .block-row-header .block-col, .tabs-grid .product-item .product-name, .tabs-grid .select-dropdown-active, .form-control, .custom-select {
+.modal-multiproduct-form .modal-footer button, .quick-guide-block .block-row-header .block-col, .tabs-grid .product-item .product-name, .tabs-grid .select-dropdown-active, .form-control {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1;
@@ -15806,7 +15806,7 @@ p {
 }
 
 /* Default Form Layouts */
-.form-control, .custom-select {
+.form-control {
   color: #98A4AB;
   font-weight: 400;
   border-color: #98A4AB;
@@ -15815,11 +15815,15 @@ p {
   height: 50px;
   padding: 8px 20px;
 }
-.form-control:focus, .custom-select:focus {
+.form-control:focus {
   color: #98A4AB;
   background-color: transparent;
   box-shadow: none;
   border-color: #98A4AB;
+}
+
+select {
+  cursor: pointer;
 }
 
 ::placeholder {
