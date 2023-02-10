@@ -15922,6 +15922,12 @@ p {
 
 select {
   cursor: pointer;
+  margin-bottom: 16px;
+}
+@media (max-width: 767.98px) {
+  select {
+    margin-bottom: 25px;
+  }
 }
 
 ::placeholder {
@@ -17421,6 +17427,9 @@ section {
 .tabs-grid .product-filter-type-2 .col-select .form-group-select:last-child {
   margin-right: 0;
 }
+.tabs-grid .product-filter-type-2 .col-select .form-group-select select {
+  margin-bottom: 0;
+}
 @media (max-width: 767.98px) {
   .tabs-grid .row-multiple .col-mobile-hide {
     display: none;
@@ -17968,6 +17977,9 @@ section {
   .locator-filter .form-group-select {
     width: 100%;
   }
+}
+.locator-filter .form-group-select select {
+  margin-bottom: 0;
 }
 .locator-filter .form-group-input {
   width: 207px;

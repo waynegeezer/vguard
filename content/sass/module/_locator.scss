@@ -55,6 +55,9 @@
         @include media-breakpoint-down(sm) {
             width: 100%;
         }
+        select {
+            margin-bottom: 0;
+        }
     }
     .form-group-input {
         width: 207px;
