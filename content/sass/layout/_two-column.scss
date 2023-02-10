@@ -160,3 +160,23 @@
         }
     }
 } 
+/* Two column within container */
+.two-column-image-text {
+    .col-image {
+        &:hover {
+            .gradient-movement {
+                opacity: 1;
+            }
+        }
+        .image {
+            display: block;
+            margin: 0 auto;
+            position: relative;
+        }
+    }
+    .col-content {
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+} 

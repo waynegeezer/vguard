@@ -92,3 +92,64 @@
         }
     }
 } 
+/* More Feature Carousel */
+.more-features-carousel {
+    max-width: 910px;
+    padding: 0 90px 0 75px;
+    margin: 0 25px;
+    .media-horizontal {
+        margin-bottom: 0;
+        padding: 18px 0 18px 18px;
+        .media-body {
+            max-width: 260px;
+        }
+        p {
+            @extend %font-size-16;
+            line-height: 20px;
+            font-weight: $font-weight-regular;
+            @include media-breakpoint-down(sm) {
+                @include font-size(14px);
+            }
+        }
+    } 
+    .owl-nav {
+        margin: 0;
+        .disabled {
+            pointer-events: none;
+        }
+        button {
+            &.owl-prev, &.owl-next {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto !important;
+                width: 52px;
+                height: 52px;
+                background: $white;
+                border: 2px solid $black-400;
+                border-radius: 50% !important;
+                margin: 0;
+                transition: all .3s;
+                &:hover {
+                    background-color: $black-400;
+                    img {
+                        filter: invert(100%) sepia(0%) saturate(1479%) hue-rotate(180deg) brightness(117%) contrast(100%);
+                    }
+                }
+            }
+            &.owl-prev {
+                left: 0;
+                img {
+                    transform: rotate(90deg) translate(-10%, 25%);
+                }
+            }
+            &.owl-next {
+                right: 0;
+                img {
+                    transform: rotate(-90deg) translate(17%, 20%);
+                }
+            } 
+        }
+
+    }
+} 

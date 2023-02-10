@@ -61,8 +61,8 @@ section {
         position: relative;
         img {
             @extend %center-aligned;
-            max-width: 60px;
-            max-height: 60px;
+            max-width: 45px;
+            max-height: 45px;
         }
     }
     .media-body {
@@ -334,3 +334,22 @@ section {
         }
     }
 }
+/* download app */
+.download-app-block {
+    margin-top: 55px;
+    p {
+        @extend %font-size-16;
+        font-weight: $font-weight-semibold;
+    }
+    a {
+        margin-right: 20px;
+        display: inline-block;
+        &:last-child {
+            margin-right: 0;
+        }
+        img {
+            max-width: 183px;
+            width: auto;
+        }
+    }
+} 

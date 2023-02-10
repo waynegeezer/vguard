@@ -61,3 +61,57 @@ ul {
 		opacity: 0.7;
 	}
 } 
+/* circular animation */ 
+%circular-animation {
+	content: "";
+	position: absolute;
+	background: url("../images/pattern/circle.svg") no-repeat center/cover;
+	width: 522px;
+	height: 523px;
+	left: 20px;
+	top: 0;
+	@include media-breakpoint-up(xl) {
+		animation: scale 2s infinite alternate;
+	}
+	@include media-breakpoint-down(lg) {
+		width: 405px;
+		height: 406px;
+	}
+	@include media-breakpoint-down(md) {
+		left: 50px;
+		top: -36px;
+	}
+	@include media-breakpoint-down(sm) {
+		width: 490px;
+		height: 491px;
+		left: 60px;
+		top: -10px;
+	}
+	@include media-breakpoint-down(xs) {
+		width: 310px;
+		height: 311px;
+		left: 0;
+	}
+} 
+/* gradient movement */
+%gradient-movement, .gradient-movement {
+	position: absolute;
+	left: -125px;
+	top: -110px;        
+	margin: auto;
+	opacity: 0.4;
+	transition: opacity .3s;
+	@include media-breakpoint-down(lg) {
+		left: 0;
+		top: -35px;
+		width: 100%;
+		opacity: 1;
+	}
+	@include media-breakpoint-down(sm) {
+		left: 0;
+		top: -100px;
+	}
+	@include media-breakpoint-down(xs) {
+		top: 0;
+	}
+} 

@@ -49,6 +49,24 @@ $(document).ready(function() {
 		}
 	});
 
+	$('.more-features-carousel').owlCarousel({
+		loop:false,
+		margin:10,
+		dots:false,
+		nav:true,
+		navText:["<img src='content/images/icons/chevron-down.svg'>","<img src='content/images/icons/chevron-down.svg'>"],
+		navSpeed:800,
+		smartSpeed:1000,
+		responsive:{
+			0:{
+				items:1
+			},
+			768:{
+				items:2
+			}
+		}
+	});
+
 	// $('select').customSelect();
 
 	$('.modal').on('show.bs.modal', function () {
@@ -138,9 +156,9 @@ $(window).on('resize scroll', function() {
 
 	if(screenWidth >= 1200) {
 		if ($('.section-tried-tested').isInViewport()) {
-			$(".col-image img").css("border-radius", (percent * 400 )+ "px");
+			$(".two-column-full-grid .col-image img").css("border-radius", (percent * 400 )+ "px");
 		} else {
-			$(".col-image img").css("border-radius", "100px");
+			$(".two-column-full-grid .col-image img").css("border-radius", "100px");
 		}
 	
 		if (scrollTop < 120) {

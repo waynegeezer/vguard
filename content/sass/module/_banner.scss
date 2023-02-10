@@ -121,6 +121,10 @@
             bottom: -72%;
             left: -95%;
             transform: translateX(50%);
+            @include media-breakpoint-up(xxl) {
+                bottom: -90%;
+                left: -80%;
+            }
         }
     } 
 }
