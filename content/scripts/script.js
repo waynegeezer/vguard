@@ -1,7 +1,8 @@
-var screenWidth = $(window).width();
+var screenWidth = $(window).width(),
+	scrollTop = $(window).scrollTop();
 $(window).scroll(function(){
-	scroll = $(window).scrollTop();
-	if (scroll >= 50) {
+	var scrollTop = $(window).scrollTop();
+	if (scrollTop >= 50) {
 		$(".navbar").addClass("sticky-header");
 	}
 	else {
@@ -124,6 +125,7 @@ $(window).on('load resize', function() {
 	if(screenWidth >= 1200) {
 		// Parallax effect 
 		$(".section-banner .banner-gradient").paroller({ factor: 0.2, factorXs: 0, type: 'background', direction: 'vertical' });
+		$(".section-banner .banner-gradient-teal").paroller({ factor: 0.08, factorXs: 0.3, type: 'background', direction: 'vertical' });
 		$(".radial-gradient").paroller({ factor: 0.3, factorXs: 0, type: 'background', direction: 'vertical' });
 		$(".two-column-gradient-right").paroller({ factor: 0.35, factorXs: 0, type: 'background', direction: 'vertical' });
 		$(".two-column-gradient-left").paroller({ factor: 0.2, factorXs: 0, type: 'background', direction: 'vertical' });

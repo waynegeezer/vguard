@@ -84,3 +84,75 @@
         }
     }
 } 
+/* explore product range callout */
+.section-explore-other-product-range {
+    padding: 40px 0 50px;
+    background-color: $black-400;
+    border-bottom: 1px solid $grey-300;
+    position: relative;
+    z-index: 2;
+    h4 {
+        color: $white;
+        text-align: center;
+    }
+} 
+.row-product-range {
+    margin-top: 30px;
+    > div {
+        margin: 15px 0;
+        &:nth-child(6n) {
+            .media:after {
+                display: none;
+            }
+        }
+        &:last-child {
+            .media:after {
+                display: none;
+            }
+        }
+    }
+    .media {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        &:after {
+            content: "";
+            position: absolute;
+            right: -15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: $grey-200;
+            width: 1px;
+            height: 48px;
+        }
+        a {
+            &:hover {
+                p {
+                    opacity: 0.7;
+                }
+            }
+        }
+        img {
+            display: block;
+            margin: 0 auto 2px;
+            height: 72px;
+        }
+        .media-body {
+            width: 100%;
+            padding: 0 10px;
+            p {
+                @extend %font-size-16;
+                line-height: 24px;
+                color: $white;
+                text-align: center;
+                margin-bottom: 0;
+                transition: all .3s;
+                @include media-breakpoint-down(sm) {
+                    @include font-size(14px);
+                }
+            }
+        }
+    }
+}

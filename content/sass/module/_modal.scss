@@ -226,6 +226,10 @@
     .row-single {
         .single-product {
             margin: 35px 0 0;
+            min-height: 405px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
             @include media-breakpoint-down(md) {
                 margin: 0;
             }
@@ -244,7 +248,8 @@
                 }
             }
             .product {
-                max-width: 305px;
+                max-width: 336px;
+                max-height: 404px;
                 @include media-breakpoint-down(sm) {
                     max-width: 280px;
                 }
@@ -277,6 +282,24 @@
             @include media-breakpoint-down(xs) {
                 left: 0;
             }
+        }
+        .product-price-type-2 {
+            @extend .product-price;
+            top: -25px !important;
+            left: -60px !important;
+            border-radius: 0 36px 36px 0 !important;
+            padding: 2px 30px 2px 22px !important;
+            p {
+                @include font-size(16px);
+            }
+        }
+        .download-link {
+            color: $orange-500;
+            @extend %font-size-16;
+            display: table;
+            margin: 30px auto 0;
+            position: relative;
+            z-index: 3;
         }
         .col-content {
             h3 {
