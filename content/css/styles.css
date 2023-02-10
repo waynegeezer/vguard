@@ -15894,12 +15894,12 @@ header.header-open {
 }
 @media (max-width: 1199.98px) {
   .navbar {
-    padding: 0 50px;
+    padding: 0 30px;
   }
 }
 @media (max-width: 991.98px) {
   .navbar {
-    padding: 15px 50px;
+    padding: 15px 30px;
     align-items: center;
     min-height: 74px;
   }
@@ -15981,7 +15981,7 @@ header.header-open {
 .navbar .navbar-brand {
   width: 155px;
   padding: 0;
-  margin: 10px 0 10px 70px;
+  margin: 10px 0 10px 30px;
   z-index: 1;
 }
 @media (max-width: 1199.98px) {
