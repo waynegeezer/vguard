@@ -101,6 +101,42 @@ section {
         }
     }
 }
+.media-horizontal {
+    @extend .media-icons;
+    padding-bottom: 0;
+    &:before {
+        display: none;
+    }
+    .media-image {
+        margin-bottom: 0;
+    }
+    .media-body {
+        max-width: 100%;
+        margin-left: 25px;
+        padding-bottom: 15px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to right, $orange , $orange-100);
+            width: 48px;
+            height: 3px;
+        }
+        p {
+            @extend %font-size-20;
+            font-weight: $font-weight-bold;
+            span {
+                @extend %font-size-18;
+                line-height: 24px;
+                font-weight: $font-weight-regular;
+                margin-top: 3px;
+                display: block;
+            }
+        }
+    }
+}
 /* section description */
 .description-block {
     max-width: 865px;

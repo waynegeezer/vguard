@@ -77,6 +77,14 @@ p {
     @include font-size(20px);
     line-height: 24px;
 }
+%font-size-20 {
+    @include font-size(20px);
+    line-height: 24px;
+    @include media-breakpoint-down(sm) {
+        @include font-size(18px);
+        line-height: 22px;
+    }
+}
 %font-size-only-18 {
     @include font-size(18px);
     line-height: 1;

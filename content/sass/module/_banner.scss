@@ -104,4 +104,23 @@
             margin-top: -80px;
         }
     }
+    /* Type 2 */
+    &.section-banner-type-2 {
+        padding-bottom: 200px;
+        .banner-bg-block {
+            img {
+                min-height: 750px;
+            }
+        }
+        .banner-content {
+            max-width: 505px;
+            margin-left: 50px;
+        }
+        .banner-product {
+            top: auto;
+            bottom: -72%;
+            left: -95%;
+            transform: translateX(50%);
+        }
+    } 
 }
