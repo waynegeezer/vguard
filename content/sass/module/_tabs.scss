@@ -17,7 +17,7 @@
         padding: 15px 35px;
         position: relative;
         z-index: 2;
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
             display: block;
         }
         &:before {
@@ -54,20 +54,22 @@
         justify-content: center;
         position: relative;
         z-index: 1;
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
+            display: none;
             flex-direction: column;
             position: absolute;
             left: 0;
             top: 48px;
             width: 100%;
             z-index: 5;
-            display: none;
             margin-bottom: 0;
             border-radius: 0 0 50px 50px;
         }
         &.nav-pills-type-2 {
-            width: calc(100% + 120px);
-            left: -60px;
+            @include media-breakpoint-up(xl) {
+                width: calc(100% + 120px);
+                left: -60px;
+            }
             @include media-breakpoint-only(xl) {
                 width: 100%;
                 left: 0;
@@ -80,7 +82,7 @@
             }
         }
         &.nav-pills-active {
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 display: block;
             }
         }
@@ -94,12 +96,12 @@
             bottom: 0;
             z-index: 0;
             transition: all .2s linear;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 display: none !important;
             }
         }
         .nav-item {
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 background-color: $blue-dark;
             }
         }
@@ -112,9 +114,6 @@
             transition: all .3s;
             @include media-breakpoint-down(lg) {
                 @include font-size(18px);
-                padding: 12px 12px;
-            }
-            @include media-breakpoint-down(md) {
                 padding: 12px 35px;
                 width: 100%;
                 text-align: left;
@@ -132,7 +131,7 @@
                 height: 9px;
                 background-color: transparent;
                 border-radius: 50%;
-                @include media-breakpoint-down(md) {
+                @include media-breakpoint-down(lg) {
                     display: none;
                 }
             }
@@ -200,9 +199,11 @@
     }
     .product-filter-type-2 {
         .col-select {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
             .form-group-select {
                 width: 50%;
-                display: inline-block;
                 max-width: 270px;
                 margin: 0 20px 0 0;
                 &:last-child {
@@ -254,6 +255,11 @@
             p {
                 margin: 0;
             }
+            .product-price {
+                @include media-breakpoint-down(lg) {
+                    text-align: right;
+                }
+            }
         }
         .item-tier-2 {
             padding: 15px;
@@ -267,6 +273,9 @@
                 max-height: 257px;
                 display: block;
                 margin: 0 auto;
+                @include media-breakpoint-down(lg) {
+                    max-width: 240px;
+                }
             }
             .type {
                 @include font-size(12px);

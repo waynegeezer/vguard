@@ -270,6 +270,13 @@
                 }
             }
         }
+        .single-product-details {
+            .media-body {
+                p {
+                    text-align: left;
+                }
+            }
+        }
         .product-price {
             top: 60px;
             @include media-breakpoint-down(md) {

@@ -97,6 +97,9 @@
     max-width: 910px;
     padding: 0 90px 0 75px;
     margin: 0 25px;
+    @include media-breakpoint-down(lg) {
+        max-width: 79%;
+    }
     .media-horizontal {
         margin-bottom: 0;
         padding: 18px 0 18px 18px;
