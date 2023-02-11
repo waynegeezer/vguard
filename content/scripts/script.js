@@ -23,9 +23,9 @@ $(window).on("load resize", function () {
 
 $(document).ready(function() {
     $(".tabs-grid .nav-pills .nav-link").click(function() {
-        var position = $(this).parent().position();
-        var width = $(this).parent().width();
-        $(".tabs-grid .slider").css({"left":+ position.left,"width":width});
+		var position = $(this).parent().position();
+		var width = $(this).parent().width();
+		$(".tabs-grid .slider").css({"left":+ position.left,"width":width});
     });
 	setTimeout(function() {
 		var actWidth = $(".tabs-grid .nav-pills").find(".active").parent("li").width();
@@ -67,8 +67,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-
-	// $('select').customSelect();
 
 	$('.modal').on('show.bs.modal', function () {
 		$("html").addClass("overflow-hidden");

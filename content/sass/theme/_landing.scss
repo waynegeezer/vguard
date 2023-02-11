@@ -228,8 +228,9 @@
     position: relative;
     z-index: 2;
     .container {
-        @include media-breakpoint-up(lg) {
-            max-width: 1280px;
+        @include media-breakpoint-up(xl) {
+            max-width: 1320px;
+            padding: 0 20px;
         }
     }
     .row-more-features {

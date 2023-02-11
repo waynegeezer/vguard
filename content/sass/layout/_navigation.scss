@@ -109,6 +109,9 @@ header {
     .navbar-collapse {
         justify-content: flex-end;
         margin-right: 110px;
+        @include media-breakpoint-only(xl) {
+            margin-right: 50px;
+        }
         @include media-breakpoint-down(lg) {
             margin-right: 0;
         }

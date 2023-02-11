@@ -65,11 +65,20 @@
             margin-bottom: 0;
             border-radius: 0 0 50px 50px;
         }
-        // &.nav-pills-type-2 {
-        //     .nav-link {
-        //         padding: 12px 10px;
-        //     }
-        // }
+        &.nav-pills-type-2 {
+            width: calc(100% + 120px);
+            left: -60px;
+            @include media-breakpoint-only(xl) {
+                width: 100%;
+                left: 0;
+            }
+            .nav-link {
+                padding: 12px 20px;
+                @include media-breakpoint-only(xl) {
+                    padding: 12px 10px;
+                }
+            }
+        }
         &.nav-pills-active {
             @include media-breakpoint-down(md) {
                 display: block;
