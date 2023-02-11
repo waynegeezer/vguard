@@ -100,11 +100,49 @@
     @include media-breakpoint-down(lg) {
         max-width: 79%;
     }
+    @include media-breakpoint-down(md) {
+        max-width: 77%;
+    }
+    @include media-breakpoint-down(sm) {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 30px 0 60px;
+    }
+    @include media-breakpoint-down(xs) {
+        padding: 0 30px 0 45px;
+    }
     .media-horizontal {
         margin-bottom: 0;
         padding: 18px 0 18px 18px;
+        @include media-breakpoint-down(xs) {
+            padding: 10px 0 0 10px;
+        }
+        .media-image {
+            @include media-breakpoint-down(xs) {
+                width: 41px;
+                height: 41px;
+            }
+            img {
+                @include media-breakpoint-down(xs) {
+                    max-width: 20px;
+                    max-height: 20px;
+                }
+            }
+        }
         .media-body {
             max-width: 260px;
+            @include media-breakpoint-down(sm) {
+                max-width: 100%;
+            }
+            @include media-breakpoint-down(xs) {
+                margin-left: 10px;
+            }
+            &:before {
+                @include media-breakpoint-down(xs) {
+                    width: 32px;
+                    height: 2px;
+                }
+            }
         }
         p {
             @extend %font-size-16;
@@ -133,23 +171,41 @@
                 border-radius: 50% !important;
                 margin: 0;
                 transition: all .3s;
+                @include media-breakpoint-down(sm) {
+                    width: 24px;
+                    height: 24px;
+                }
                 &:hover {
                     background-color: $black-400;
                     img {
                         filter: invert(100%) sepia(0%) saturate(1479%) hue-rotate(180deg) brightness(117%) contrast(100%);
                     }
                 }
+                img {
+                    @include media-breakpoint-down(sm) {
+                        width: 9px;
+                    }
+                }
             }
             &.owl-prev {
                 left: 0;
+                @include media-breakpoint-down(sm) {
+                    left: 20px;
+                }
                 img {
                     transform: rotate(90deg) translate(-10%, 25%);
+                    @include media-breakpoint-down(sm) {
+                        transform: rotate(90deg) translate(-30%, 25%);
+                    }
                 }
             }
             &.owl-next {
                 right: 0;
                 img {
                     transform: rotate(-90deg) translate(17%, 20%);
+                    @include media-breakpoint-down(sm) {
+                        transform: rotate(-90deg) translate(30%, 20%);
+                    }
                 }
             } 
         }

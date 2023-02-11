@@ -67,9 +67,17 @@ section {
         &-sm {
             width: 48px;
             height: 48px;
+            @include media-breakpoint-down(xs) {
+                width: 32px;
+                height: 32px;
+            }
             img {
                 max-width: 30px;
                 max-height: 30px;
+                @include media-breakpoint-down(xs) {
+                    max-width: 16px;
+                    max-height: 16px;
+                }
             }
         }
     }
@@ -346,6 +354,9 @@ section {
 /* download app */
 .download-app-block {
     margin-top: 55px;
+    @include media-breakpoint-down(sm) {
+        margin-top: 35px;
+    }
     p {
         @extend %font-size-16;
         font-weight: $font-weight-semibold;
@@ -353,12 +364,21 @@ section {
     a {
         margin-right: 20px;
         display: inline-block;
+        &:hover {
+            opacity: 0.85;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-right: 15px;
+        }
         &:last-child {
             margin-right: 0;
         }
         img {
             max-width: 183px;
             width: auto;
+            @include media-breakpoint-down(sm) {
+                max-height: 42px;
+            }
         }
     }
 } 

@@ -62,7 +62,7 @@ $(document).ready(function() {
 			0:{
 				items:1
 			},
-			768:{
+			992:{
 				items:2
 			}
 		}

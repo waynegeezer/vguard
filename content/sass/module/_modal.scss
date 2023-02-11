@@ -233,6 +233,9 @@
             @include media-breakpoint-down(md) {
                 margin: 0;
             }
+            @include media-breakpoint-down(sm) {
+                min-height: 375px;
+            }
             &:before {
                 width: 420px;
                 height: 421px;
@@ -274,6 +277,9 @@
             .media-body {
                 p {
                     text-align: left;
+                    @include media-breakpoint-down(sm) {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -296,8 +302,12 @@
             left: -60px !important;
             border-radius: 0 36px 36px 0 !important;
             padding: 2px 30px 2px 22px !important;
+            @include media-breakpoint-down(md) {
+                top: 30px !important;
+                left: -20px !important;
+            }
             p {
-                @include font-size(16px);
+                @include font-size(16px, true);
             }
         }
         .download-link {
@@ -307,6 +317,7 @@
             margin: 30px auto 0;
             position: relative;
             z-index: 3;
+            @extend %hover-text;
         }
         .col-content {
             h3 {

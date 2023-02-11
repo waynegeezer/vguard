@@ -1,12 +1,16 @@
 /* MIXINS */
+/* Mixin for impportant */ 
+@function if-important($important){
+    @return #{if($important, '!important', '')};
+  }
 /* Mixin for font size */
 @function calculateRem($size) {
     $remSize: $size / 16px;
     @return #{$remSize}rem;
 }
-@mixin font-size ($size) {
-    font-size: $size; //Fallback in px
-    font-size: calculateRem($size);
+@mixin font-size ($size, $important: false) {
+    font-size: $size if-important($important); //Fallback in px
+    font-size: calculateRem($size) if-important($important);
 }
 /* Mixin for hover focus */ 
 @mixin hover-focus () {

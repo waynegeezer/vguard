@@ -105,6 +105,20 @@
                 display: none;
             }
         }
+        &:nth-child(3n) {
+            .media:after {
+                @include media-breakpoint-between(sm, md) {
+                    display: none;
+                }
+            }
+        }
+        &:nth-child(2n) {
+            .media:after {
+                @include media-breakpoint-down(xs) {
+                    display: none;
+                }
+            }
+        }
         &:last-child {
             .media:after {
                 display: none;

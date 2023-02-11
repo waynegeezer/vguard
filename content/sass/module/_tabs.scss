@@ -104,6 +104,12 @@
             @include media-breakpoint-down(lg) {
                 background-color: $blue-dark;
             }
+            &:last-child {
+                @include media-breakpoint-down(lg) {
+                    border-radius: 0 0 25px 25px;
+                    padding-bottom: 10px;
+                }
+            }
         }
         .nav-link {
             @include font-size(20px);
@@ -202,10 +208,16 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: flex-start;
+            @include media-breakpoint-down(md) {
+                margin-top: 30px;
+            }
             .form-group-select {
                 width: 50%;
                 max-width: 270px;
                 margin: 0 20px 0 0;
+                @include media-breakpoint-down(sm) {
+                    max-width: 100%;
+                }
                 &:last-child {
                     margin-right: 0;
                 }
