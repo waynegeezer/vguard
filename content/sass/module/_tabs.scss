@@ -67,12 +67,12 @@
         }
         &.nav-pills-type-2 {
             @include media-breakpoint-up(xl) {
-                width: calc(100% + 120px);
-                left: -60px;
+                width: calc(100% + 130px);
+                margin-left: -65px;
             }
             @include media-breakpoint-only(xl) {
                 width: 100%;
-                left: 0;
+                margin-left: 0;
             }
             .nav-link {
                 padding: 12px 20px;
@@ -162,9 +162,6 @@
         margin: 0 0 40px;
         @include media-breakpoint-down(sm) {
             margin: 0 0 30px;
-        }
-        @include media-breakpoint-down(xs) {
-            margin: 0 0 20px;
         }
     }
     .product-filter {

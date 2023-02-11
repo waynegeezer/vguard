@@ -50,6 +50,13 @@
     .banner-bg-block {
         position: relative;
         z-index: 1;
+        &.no-animation {
+            img {
+                @include media-breakpoint-up(xl) {
+                    border-radius: 0 325px 325px 0;
+                }
+            }
+        }
         img {
             object-fit: cover;
             width: 100%;

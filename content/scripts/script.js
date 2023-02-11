@@ -162,9 +162,9 @@ $(window).on('resize scroll', function() {
 		}
 	
 		if (scrollTop < 120) {
-			$(".banner-bg-block img").css("border-radius", "150px");
+			$(".banner-bg-block:not(.no-animation) img").css("border-radius", "150px");
 		} else {
-			$(".banner-bg-block img").css("border-radius", (percent * 8000) + "px");
+			$(".banner-bg-block:not(.no-animation) img").css("border-radius", (percent * 8000) + "px");
 		}
 	}
 
