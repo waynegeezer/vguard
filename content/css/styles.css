@@ -19205,6 +19205,11 @@ section {
   position: relative;
   z-index: 2;
 }
+@media (max-width: 575.98px) {
+  .section-explore-other-product-range {
+    padding: 40px 0 25px;
+  }
+}
 .section-explore-other-product-range h4 {
   color: #fff;
   text-align: center;
@@ -19212,6 +19217,11 @@ section {
 
 .row-product-range {
   margin-top: 30px;
+}
+@media (max-width: 575.98px) {
+  .row-product-range {
+    margin-top: 20px;
+  }
 }
 .row-product-range > div {
   margin: 15px 0;
@@ -19256,6 +19266,11 @@ section {
   display: block;
   margin: 0 auto 2px;
   height: 72px;
+}
+@media (max-width: 575.98px) {
+  .row-product-range .media img {
+    height: 64px;
+  }
 }
 .row-product-range .media .media-body {
   width: 100%;

@@ -91,6 +91,9 @@
     border-bottom: 1px solid $grey-300;
     position: relative;
     z-index: 2;
+    @include media-breakpoint-down(xs) {
+        padding: 40px 0 25px;
+    }
     h4 {
         color: $white;
         text-align: center;
@@ -98,6 +101,9 @@
 } 
 .row-product-range {
     margin-top: 30px;
+    @include media-breakpoint-down(xs) {
+        margin-top: 20px;
+    }
     > div {
         margin: 15px 0;
         &:nth-child(6n) {
@@ -152,6 +158,9 @@
             display: block;
             margin: 0 auto 2px;
             height: 72px;
+            @include media-breakpoint-down(xs) {
+                height: 64px;
+            }
         }
         .media-body {
             width: 100%;

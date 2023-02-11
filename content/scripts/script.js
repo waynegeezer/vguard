@@ -120,6 +120,17 @@ $(document).ready(function() {
 });
 
 $(window).on('load resize', function() {
+	var navHeight = $("header").height();
+	$("header .nav-link").on('click', function(event) {
+		if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top - navHeight
+			}, 800);
+		}
+	});
+
 	if(screenWidth >= 1200) {
 		// Parallax effect 
 		$(".section-banner .banner-gradient").paroller({ factor: 0.2, factorXs: 0, type: 'background', direction: 'vertical' });
@@ -136,17 +147,6 @@ $(window).on('load resize', function() {
 			transition: true
 		});
 	}
-
-	var navHeight = $(".navbar").height();
-	$("header .nav-link").on('click', function(event) {
-		if (this.hash !== "") {
-			event.preventDefault();
-			var hash = this.hash;
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top - navHeight
-			}, 800);
-		}
-	});
 });
 
 $(window).on('resize scroll', function() {
