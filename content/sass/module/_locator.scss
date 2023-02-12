@@ -101,13 +101,14 @@
                 margin: 0 2px;
                 @include media-breakpoint-down(sm) {
                     margin: 0 6px;
-                }
+                } 
             }
         }
     }
     .form-group-button {
         margin: 40px auto 0;
         display: block;
+        position: relative;
         @include media-breakpoint-down(lg) {
             width: 100%;
         }

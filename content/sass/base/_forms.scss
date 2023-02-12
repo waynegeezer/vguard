@@ -47,4 +47,41 @@ textarea {
     @include media-breakpoint-down(sm) {
         height: 190px !important;
     }
+    + span {
+        color: $color-primary !important;
+        margin-top: 10px;
+        display: block;
+    }
+}
+/* custom checkbox */
+.custom-control-label {
+    color: #606060;
+    font-weight: 600;
+    padding: 2px 0 0 6px;
+    cursor: pointer;
+    @include media-breakpoint-down(sm) {
+        @include font-size(14px);
+    }
+    &:before, &:after {
+        width: 20px;
+        height: 20px;
+    }
+    &:before {
+        border-color: rgba($blue-300, 0.5) !important;
+        background-color: transparent !important;
+        border-radius: 3px !important;
+    }
+}
+.custom-control-input {
+    &:focus {
+        ~ .custom-control-label:before {
+            box-shadow: none;
+        }
+    }
+    &:checked {
+        ~ .custom-control-label::before {
+            background-color: $blue-300 !important;
+            border-color: $blue-300 !important;
+        }
+    }
 }

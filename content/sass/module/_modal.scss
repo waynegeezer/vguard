@@ -356,11 +356,16 @@
             margin: 0;
             @extend %font-size-only-18;
             color: $color-primary;
+            width: 48%;
+            text-align: left;
             background-color: transparent;
             border: none;
             outline: none;
             transition: all .3s;
             @extend %hover-text;
+            &:nth-child(2) {
+                text-align: right;
+            }
             span {
                 color: $orange-400;
                 font-weight: $font-weight-semibold;

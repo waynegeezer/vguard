@@ -17363,6 +17363,42 @@ textarea {
     height: 190px !important;
   }
 }
+textarea + span {
+  color: #333333 !important;
+  margin-top: 10px;
+  display: block;
+}
+
+/* custom checkbox */
+.custom-control-label {
+  color: #606060;
+  font-weight: 600;
+  padding: 2px 0 0 6px;
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .custom-control-label {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+.custom-control-label:before, .custom-control-label:after {
+  width: 20px;
+  height: 20px;
+}
+.custom-control-label:before {
+  border-color: rgba(44, 110, 181, 0.5) !important;
+  background-color: transparent !important;
+  border-radius: 3px !important;
+}
+
+.custom-control-input:focus ~ .custom-control-label:before {
+  box-shadow: none;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #2C6EB5 !important;
+  border-color: #2C6EB5 !important;
+}
 
 /* Layouts */
 /* Import all Layout Files */ /* Navigation */
@@ -17952,7 +17988,7 @@ section {
 .radial-gradient {
   background: url("../images/pattern/radial-dual.png") no-repeat center/contain;
   width: 100%;
-  min-height: 1700px;
+  min-height: 1750px;
   position: absolute;
   top: -400px;
   right: 0;
@@ -18868,12 +18904,15 @@ section {
   }
 }
 .tabs-grid .product-filter, .tabs-grid .product-filter-type-2 {
-  margin: 0 0 40px;
+  margin: 20px 0 40px;
 }
 @media (max-width: 767.98px) {
   .tabs-grid .product-filter, .tabs-grid .product-filter-type-2 {
-    margin: 0 0 30px;
+    margin: 20px 0 30px;
   }
+}
+.tabs-grid .product-filter:first-of-type, .tabs-grid .product-filter-type-2:first-of-type {
+  margin-top: 0;
 }
 .tabs-grid .product-filter {
   display: flex;
@@ -19734,6 +19773,7 @@ section {
 .locator-filter .form-group-button {
   margin: 40px auto 0;
   display: block;
+  position: relative;
 }
 @media (max-width: 1199.98px) {
   .locator-filter .form-group-button {
@@ -20319,10 +20359,15 @@ section {
 .modal-multiproduct-form .modal-footer button {
   margin: 0;
   color: #333333;
+  width: 48%;
+  text-align: left;
   background-color: transparent;
   border: none;
   outline: none;
   transition: all 0.3s;
+}
+.modal-multiproduct-form .modal-footer button:nth-child(2) {
+  text-align: right;
 }
 .modal-multiproduct-form .modal-footer button span {
   color: #F99C1B;
