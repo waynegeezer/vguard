@@ -109,7 +109,7 @@
                     display: block;
                     @include media-breakpoint-down(lg) {
                         @include font-size(14px);
-                        line-height: 1;
+                        line-height: 22px;
                     }
                 }
             }

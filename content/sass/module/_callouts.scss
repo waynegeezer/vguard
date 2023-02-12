@@ -84,6 +84,57 @@
         }
     }
 } 
+/* Neightbourhood callout */ 
+.row-neighbourhood {
+    margin-top: 75px;
+    margin-bottom: 60px;
+    @include media-breakpoint-down(sm) {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+    > div {
+        .media {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 50px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 65px;
+                align-items: center;
+            }
+        }
+        &:last-child {
+            .media {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .media {
+        padding: 0;
+        margin: 0;
+        &:before {
+            display: none;
+        }
+        .media-image {
+            margin: 0 20px 0 0;
+        }
+        .media-body {
+            p {
+                color: $grey-600;
+                font-weight: $font-weight-semibold;
+                @include media-breakpoint-down(sm) {
+                    @include font-size(18px);
+                }
+                > span {
+                    @extend %font-size-54;
+                    color: $black-300;
+                    font-weight: $font-weight-bold;
+                    display: block;
+                    margin-top: -6px;
+                }
+            }
+        }
+    }
+}
 /* explore product range callout */
 .section-explore-other-product-range {
     padding: 40px 0 50px;

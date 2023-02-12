@@ -261,6 +261,9 @@
             padding: 15px 20px;
             border-bottom: 1px solid $white-200;
             border-radius: 20px 20px 0 0;
+            @include media-breakpoint-down(md) {
+                padding: 15px;
+            }
             p {
                 margin: 0;
             }
@@ -285,7 +288,7 @@
                 @include media-breakpoint-down(lg) {
                     max-width: 240px;
                 }
-            }
+            } 
             .type {
                 @include font-size(12px);
                 line-height: 1;
@@ -308,9 +311,6 @@
             border-top: 1px solid $white-200;
             border-radius: 0 0 20px 20px;
             padding: 20px 15px;
-            // @include media-breakpoint-down(sm) {
-            //     padding: 20px 15px;
-            // }
             .media {
                 padding: 0;
                 margin: 0 25px;
@@ -358,6 +358,7 @@
             @extend %font-size-only-18;
             color: $color-primary;
             font-weight: $font-weight-bold;
+            padding-right: 10px;
         }
         .product-price {
             @extend %font-size-16;

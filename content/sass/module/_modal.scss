@@ -274,6 +274,9 @@
             }
         }
         .single-product-details {
+            @include media-breakpoint-down(sm) {
+                max-width: 350px;
+            }
             .media-body {
                 p {
                     text-align: left;
