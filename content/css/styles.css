@@ -17796,7 +17796,6 @@ footer .social-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-  margin-top: 25px;
   list-style-type: none;
 }
 @media (max-width: 1199.98px) {
@@ -19321,6 +19320,12 @@ section {
 }
 .section-explore-other-product-range h4 {
   color: #fff;
+}
+@media (max-width: 767.98px) {
+  .section-explore-other-product-range h4 {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
 }
 
 .row-product-range {

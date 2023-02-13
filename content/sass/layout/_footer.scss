@@ -94,9 +94,6 @@ footer {
         }
         @include media-breakpoint-down(sm) {
             margin: 40px 0 15px;
-            // padding-top: 30px;
-            // border-top: 1px solid $grey-300;
-            // max-width: 340px;
         }
         li, a {
             color: $grey-500;
@@ -111,7 +108,6 @@ footer {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
-        margin-top: 25px;
         list-style-type: none;
         @include media-breakpoint-down(lg) {
             justify-content: center;

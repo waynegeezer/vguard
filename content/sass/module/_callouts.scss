@@ -147,6 +147,9 @@
     }
     h4 {
         color: $white;
+        @include media-breakpoint-down(sm) {
+            @include font-size(30px);
+        }
     }
 } 
 .row-product-range {
