@@ -18563,9 +18563,17 @@ section {
   position: relative;
   z-index: 1;
 }
-@media (min-width: 1200px) {
+.section-banner .banner-bg-block.no-animation img {
+  border-radius: 0 !important;
+}
+@media (max-width: 1199.98px) {
   .section-banner .banner-bg-block.no-animation img {
-    border-radius: 0 325px 325px 0;
+    object-position: center 90%;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-banner .banner-bg-block.no-animation img {
+    object-position: center 100%;
   }
 }
 .section-banner .banner-bg-block img {
@@ -18581,14 +18589,19 @@ section {
 @media (max-width: 1199.98px) {
   .section-banner .banner-bg-block img {
     max-width: 100%;
-    max-height: 590px;
+    max-height: 700px;
     min-height: auto;
     border-radius: 0 0 340px 340px !important;
   }
 }
+@media (max-width: 991.98px) {
+  .section-banner .banner-bg-block img {
+    max-height: 590px;
+  }
+}
 @media (max-width: 767.98px) {
   .section-banner .banner-bg-block img {
-    max-height: 400px;
+    max-height: 450px;
     border-radius: 0 0 250px 250px !important;
   }
 }

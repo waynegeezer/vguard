@@ -52,8 +52,12 @@
         z-index: 1;
         &.no-animation {
             img {
-                @include media-breakpoint-up(xl) {
-                    border-radius: 0 325px 325px 0;
+                border-radius: 0 !important;
+                @include media-breakpoint-down(lg) {
+                    object-position: center 90%;
+                }
+                @include media-breakpoint-down(md) {
+                    object-position: center 100%;
                 }
             }
         }
@@ -68,12 +72,15 @@
             border-bottom-left-radius: 0 !important;
             @include media-breakpoint-down(lg) {
                 max-width: 100%;
-                max-height: 590px;
+                max-height: 700px;
                 min-height: auto;
                 border-radius: 0 0 340px 340px !important;
             }
+            @include media-breakpoint-down(md) {
+                max-height: 590px;
+            }
             @include media-breakpoint-down(sm) {
-                max-height: 400px;
+                max-height: 450px;
                 border-radius: 0 0 250px 250px !important;
             }
             @include media-breakpoint-down(xs) {
