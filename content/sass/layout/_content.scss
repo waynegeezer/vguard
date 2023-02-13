@@ -127,8 +127,8 @@ section {
 /* Floating icon - off season */
 .floating-icon-block {
     position: fixed;
-    bottom: 50px;
-    right: 85px;
+    bottom: 30px;
+    right: 50px;
     z-index: 10;
     @include media-breakpoint-down(lg) {
         right: 50px;

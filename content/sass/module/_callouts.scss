@@ -139,7 +139,7 @@
 .section-explore-other-product-range {
     padding: 40px 0 50px;
     background-color: $black-400;
-    border-bottom: 1px solid $grey-300;
+    border-top: 1px solid $grey-300;
     position: relative;
     z-index: 2;
     @include media-breakpoint-down(xs) {
@@ -147,7 +147,6 @@
     }
     h4 {
         color: $white;
-        text-align: center;
     }
 } 
 .row-product-range {
