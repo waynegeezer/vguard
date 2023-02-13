@@ -166,12 +166,12 @@ $(window).on('resize scroll', function() {
 		} else {
 			$(".banner-bg-block:not(.no-animation) img").css("border-radius", (percent * 8000) + "px");
 		}
-	}
 
-	if ($('footer').isInViewport()) {
-		$(".floating-icon-block").fadeOut();
-	} else {
-		$(".floating-icon-block").fadeIn();
+		if ($('footer').isInViewport() || $('.section-call-to').isInViewport() || $('.section-explore-other-product-range').isInViewport()) {
+			$(".floating-icon-block").fadeOut();
+		} else {
+			$(".floating-icon-block").fadeIn();
+		}
 	}
 });
 

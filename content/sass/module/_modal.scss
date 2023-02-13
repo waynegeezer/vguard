@@ -380,6 +380,21 @@
         }
     }
 }
+#modal-thank-you {
+    .thank-you-block {
+        .product-block {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            max-width: fit-content;
+            height: 216px;
+            .product-image {
+                max-width: 250px;
+                max-height: 216px;
+            }
+        }
+    }
+}
 .modal-video {
     .modal-xl {
         @include media-breakpoint-down(sm) {

@@ -20393,6 +20393,18 @@ section {
   }
 }
 
+#modal-thank-you .thank-you-block .product-block {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  max-width: fit-content;
+  height: 216px;
+}
+#modal-thank-you .thank-you-block .product-block .product-image {
+  max-width: 250px;
+  max-height: 216px;
+}
+
 @media (max-width: 767.98px) {
   .modal-video .modal-xl {
     max-width: 90%;
